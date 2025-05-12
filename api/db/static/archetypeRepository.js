@@ -3337,6 +3337,511 @@ const tnh = [
   },
 ];
 
+// ...existing code...
+const voab = [
+  // p.26 Space Marine Scout
+  {
+    ...archetype(source.voab.key, 26, 'Adeptus Astartes', 'Space Marine Scout', 2, 'Adeptus Astartes'),
+    ...costz(170, [
+      reqAttribute(ATTRIBUTES.STRENGTH, 4),
+      reqAttribute(ATTRIBUTES.TOUGHNESS, 4),
+      reqAttribute(ATTRIBUTES.AGILITY, 4),
+      reqAttribute(ATTRIBUTES.INITIATIVE, 4),
+      reqAttribute(ATTRIBUTES.WILLPOWER, 3),
+      reqAttribute(ATTRIBUTES.INTELLECT, 3),
+      reqSkill(SKILLS.ATHLETICS, 3),
+      reqSkill(SKILLS.AWARENESS, 3),
+      reqSkill(SKILLS.BALLISTIC_SKILL, 3),
+      reqSkill(SKILLS.STEALTH, 3),
+      reqSkill(SKILLS.WEAPON_SKILL, 3),
+    ]),
+    hint: 'A stealthy warrior adept at reconnaissance.',
+    keywords: 'Imperium,Adeptus Astartes,[Chapter]',
+    archetypeFeatures: [
+      {
+        name: 'Use the Terrain',
+        snippet: 'You gain +Rank to any Stealth (A) Test when there is some form of terrain to hide behind.',
+        modifications: [
+          { targetGroup: 'skills', targetValue: SKILLS.STEALTH, modifier: 0, rank: 1, condition: 'when there is some form of terrain to hide behind' },
+        ],
+      },
+    ],
+    wargear: [
+      { name: 'Scout Armour' },
+      { name: 'Astartes Combat Knife' },
+      { name: 'Frag Grenade', amount: 3 },
+      { name: 'Vox Bead' },
+      {
+        name: 'Choose any one of the following options; A Boltgun or A Bolt pistol and a Chainsword or An Astartes Shotgun or An Astartes Sniper Rifle and a Cameleoline Cloak',
+        selected: 'Boltgun',
+        options: [
+          { name: 'Boltgun' },
+          { name: 'Chainsword and Bolt Pistol' },
+          { name: 'Astartes Shotgun' },
+          { name: 'Astartes Sniper Rifle and Cameleoline Cloak' },
+        ],
+      },
+    ],
+    influence: 1,
+  },
+  // p.27 Tactical Space Marine
+  {
+    ...archetype(source.voab.key, 27, 'Adeptus Astartes', 'Tactical Space Marine', 3, 'Adeptus Astartes'),
+    ...costz(257, [
+      reqAttribute(ATTRIBUTES.STRENGTH, 4),
+      reqAttribute(ATTRIBUTES.TOUGHNESS, 5),
+      reqAttribute(ATTRIBUTES.AGILITY, 5),
+      reqAttribute(ATTRIBUTES.INITIATIVE, 5),
+      reqAttribute(ATTRIBUTES.WILLPOWER, 3),
+      reqAttribute(ATTRIBUTES.INTELLECT, 3),
+      reqSkill(SKILLS.ATHLETICS, 3),
+      reqSkill(SKILLS.AWARENESS, 3),
+      reqSkill(SKILLS.BALLISTIC_SKILL, 5),
+      reqSkill(SKILLS.LEADERSHIP, 1),
+      reqSkill(SKILLS.SCHOLAR, 1),
+      reqSkill(SKILLS.STEALTH, 3),
+      reqSkill(SKILLS.SURVIVAL, 1),
+      reqSkill(SKILLS.WEAPON_SKILL, 4),
+    ]),
+    hint: 'A versatile warrior, veteran of a hundred battles.',
+    keywords: 'Imperium,Adeptus Astartes,[Chapter]',
+    archetypeFeatures: [
+      {
+        name: 'Tactical Versatility',
+        snippet: 'Your training has prepared you for any circumstance. When you make a Critical Hit you may roll twice on the Critical Hit Table and choose either result.',
+      },
+    ],
+    wargear: wargearz('Aquila Mk VII/Aquila Power Armour, Boltgun, Bolt Pistol, Astartes Combat Knife, 3 Frag Grenade, 3 Krak Grenade'),
+    influence: 2,
+  },
+  // p.28 1st Company Veteran
+  {
+    ...archetype(source.voab.key, 28, 'Adeptus Astartes', '1st Company Veteran', 4, 'Adeptus Astartes'),
+    ...costz(330, [
+      reqAttribute(ATTRIBUTES.STRENGTH, 4),
+      reqAttribute(ATTRIBUTES.TOUGHNESS, 5),
+      reqAttribute(ATTRIBUTES.AGILITY, 5),
+      reqAttribute(ATTRIBUTES.INITIATIVE, 5),
+      reqAttribute(ATTRIBUTES.WILLPOWER, 3),
+      reqAttribute(ATTRIBUTES.INTELLECT, 3),
+      reqSkill(SKILLS.ATHLETICS, 3),
+      reqSkill(SKILLS.AWARENESS, 3),
+      reqSkill(SKILLS.BALLISTIC_SKILL, 5),
+      reqSkill(SKILLS.LEADERSHIP, 3),
+      reqSkill(SKILLS.SCHOLAR, 1),
+      reqSkill(SKILLS.STEALTH, 3),
+      reqSkill(SKILLS.SURVIVAL, 1),
+      reqSkill(SKILLS.WEAPON_SKILL, 5),
+    ]),
+    hint: 'A veteran of centuries of war.',
+    keywords: 'Imperium,Adeptus Astartes,[Chapter]',
+    archetypeFeatures: [
+      {
+        name: 'Master of Warfare',
+        snippet: 'Add 1 to the damage of all weapons.',
+      },
+    ],
+    wargear: wargearz('Terminator Armour, Storm Bolter, Power Sword or Power Fist, Crux Terminatus'),
+    influence: 2,
+  },
+  // p.29 Apothecary
+  {
+    ...archetype(source.voab.key, 29, 'Adeptus Astartes', 'Apothecary', 4, 'Adeptus Astartes'),
+    ...costz(357, [
+      reqAttribute(ATTRIBUTES.STRENGTH, 5),
+      reqAttribute(ATTRIBUTES.TOUGHNESS, 5),
+      reqAttribute(ATTRIBUTES.AGILITY, 5),
+      reqAttribute(ATTRIBUTES.INITIATIVE, 5),
+      reqAttribute(ATTRIBUTES.WILLPOWER, 4),
+      reqAttribute(ATTRIBUTES.INTELLECT, 5),
+      reqSkill(SKILLS.ATHLETICS, 3),
+      reqSkill(SKILLS.AWARENESS, 3),
+      reqSkill(SKILLS.BALLISTIC_SKILL, 5),
+      reqSkill(SKILLS.LEADERSHIP, 1),
+      reqSkill(SKILLS.MEDICAE, 5),
+      reqSkill(SKILLS.SCHOLAR, 1),
+      reqSkill(SKILLS.STEALTH, 3),
+      reqSkill(SKILLS.SURVIVAL, 1),
+      reqSkill(SKILLS.WEAPON_SKILL, 5),
+    ]),
+    hint: 'The medical specialist.',
+    keywords: 'Imperium,Adeptus Astartes,[Chapter]',
+    archetypeFeatures: [
+      {
+        name: 'Prime Helix',
+        snippet: 'When you succeed on a Medicae Test to heal a target’s Wounds, they recover +Rank additional Wounds.',
+      },
+    ],
+    wargear: wargearz('Aquila Mk VII/Aquila Power Armour, Bolt Pistol, Chainsword, 3 Frag Grenade, 3 Krak Grenade, Narthecium, Reductor'),
+    influence: 2,
+  },
+  // p.30 Eliminator
+  {
+    ...archetype(source.voab.key, 30, 'Adeptus Astartes', 'Eliminator', 4, 'Primaris Astartes'),
+    ...costz(300, [
+      reqAttribute(ATTRIBUTES.STRENGTH, 5),
+      reqAttribute(ATTRIBUTES.TOUGHNESS, 5),
+      reqAttribute(ATTRIBUTES.AGILITY, 5),
+      reqAttribute(ATTRIBUTES.INITIATIVE, 5),
+      reqAttribute(ATTRIBUTES.WILLPOWER, 3),
+      reqAttribute(ATTRIBUTES.INTELLECT, 3),
+      reqSkill(SKILLS.ATHLETICS, 3),
+      reqSkill(SKILLS.AWARENESS, 4),
+      reqSkill(SKILLS.BALLISTIC_SKILL, 6),
+      reqSkill(SKILLS.STEALTH, 4),
+      reqSkill(SKILLS.WEAPON_SKILL, 3),
+    ]),
+    hint: 'A master marksman and silent killer.',
+    keywords: 'Imperium,Adeptus Astartes,Primaris,[Chapter]',
+    archetypeFeatures: [
+      {
+        name: 'Silent Death',
+        snippet: 'You gain +Double Rank bonus dice to Ballistic Skill Tests when attacking from Stealth. When you inflict a Critical Hit with a ranged attack, you may choose to remain hidden.',
+      },
+    ],
+    wargear: wargearz('Mk X Phobos Power Armour, Bolt Sniper Rifle or Las Fusil, Camo Cloak, Bolt Pistol, Combat Knife, 3 Frag Grenade, 3 Krak Grenade'),
+    influence: 2,
+  },
+  // p.31 Incursor
+  {
+    ...archetype(source.voab.key, 31, 'Adeptus Astartes', 'Incursor', 4, 'Primaris Astartes'),
+    ...costz(300, [
+      reqAttribute(ATTRIBUTES.STRENGTH, 5),
+      reqAttribute(ATTRIBUTES.TOUGHNESS, 5),
+      reqAttribute(ATTRIBUTES.AGILITY, 5),
+      reqAttribute(ATTRIBUTES.INITIATIVE, 5),
+      reqAttribute(ATTRIBUTES.WILLPOWER, 3),
+      reqAttribute(ATTRIBUTES.INTELLECT, 3),
+      reqSkill(SKILLS.ATHLETICS, 3),
+      reqSkill(SKILLS.AWARENESS, 4),
+      reqSkill(SKILLS.BALLISTIC_SKILL, 5),
+      reqSkill(SKILLS.STEALTH, 4),
+      reqSkill(SKILLS.WEAPON_SKILL, 4),
+    ]),
+    hint: 'A forward scout and saboteur.',
+    keywords: 'Imperium,Adeptus Astartes,Primaris,[Chapter]',
+    archetypeFeatures: [
+      {
+        name: 'Forward Deploy',
+        snippet: 'You may always act in the first round of combat, even if surprised. You gain +Rank bonus dice to Stealth and Awareness Tests during the first round of combat.',
+      },
+    ],
+    wargear: wargearz('Mk X Phobos Power Armour, Occulus Bolt Carbine, Paired Combat Blades, Bolt Pistol, Haywire Mine, 3 Frag Grenade, 3 Krak Grenade'),
+    influence: 2,
+  },
+  // p.32 Intercessor
+  {
+    ...archetype(source.voab.key, 32, 'Adeptus Astartes', 'Intercessor', 4, 'Primaris Astartes'),
+    ...costz(300, [
+      reqAttribute(ATTRIBUTES.STRENGTH, 5),
+      reqAttribute(ATTRIBUTES.TOUGHNESS, 6),
+      reqAttribute(ATTRIBUTES.AGILITY, 5),
+      reqAttribute(ATTRIBUTES.INITIATIVE, 5),
+      reqAttribute(ATTRIBUTES.WILLPOWER, 3),
+      reqAttribute(ATTRIBUTES.INTELLECT, 3),
+      reqSkill(SKILLS.ATHLETICS, 3),
+      reqSkill(SKILLS.AWARENESS, 3),
+      reqSkill(SKILLS.BALLISTIC_SKILL, 6),
+      reqSkill(SKILLS.STEALTH, 3),
+      reqSkill(SKILLS.WEAPON_SKILL, 3),
+    ]),
+    hint: 'A skilled and focused warrior, adept at bringing death at range.',
+    keywords: 'Imperium,Adeptus Astartes,Primaris,[Chapter]',
+    archetypeFeatures: [
+      {
+        name: 'Intercessor Focus',
+        snippet: 'You gain +Double Rank bonus dice to any Ballistic Skill Tests to fire a ranged weapon with the PRIMARIS Keyword.',
+        modifications: [
+          { targetGroup: 'skills', targetValue: SKILLS.BALLISTIC_SKILL, modifier: 0, rank: 2, condition: 'when firing a PRIMARIS weapon.' },
+        ],
+      },
+    ],
+    wargear: wargearz('Tacticus Mk X/Mark X Tacticus Power Armour, Bolt Rifle, Heavy Bolt Pistol, Astartes Combat Knife, 3 Frag Grenade, 3 Krak Grenade'),
+    influence: 1,
+  },
+  // p.33 Librarian
+  {
+    ...archetype(source.voab.key, 33, 'Adeptus Astartes', 'Librarian', 4, 'Adeptus Astartes'),
+    ...costz(359, [
+      reqAttribute(ATTRIBUTES.STRENGTH, 5),
+      reqAttribute(ATTRIBUTES.TOUGHNESS, 5),
+      reqAttribute(ATTRIBUTES.AGILITY, 5),
+      reqAttribute(ATTRIBUTES.INITIATIVE, 5),
+      reqAttribute(ATTRIBUTES.WILLPOWER, 6),
+      reqAttribute(ATTRIBUTES.INTELLECT, 3),
+      reqSkill(SKILLS.ATHLETICS, 3),
+      reqSkill(SKILLS.AWARENESS, 3),
+      reqSkill(SKILLS.BALLISTIC_SKILL, 5),
+      reqSkill(SKILLS.PSYCHIC_MASTERY, 4),
+      reqSkill(SKILLS.SCHOLAR, 2),
+      reqSkill(SKILLS.STEALTH, 3),
+      reqSkill(SKILLS.SURVIVAL, 1),
+      reqSkill(SKILLS.WEAPON_SKILL, 5),
+    ]),
+    hint: 'Invoke the librarian powers.',
+    keywords: 'Imperium,Adeptus Astartes,[Chapter],Psyker',
+    archetypeFeatures: [
+      {
+        name: 'Psyker',
+        snippet: 'You know the Smite psychic power and one Librarius psychic.',
+        description:
+          '<p>You are a psyker; you know the Smite psychic power and one Librarius psychic power.</p>',
+        psychicPowers: [
+          { name: 'psykerSmite', selected: 'Smite', query: { name: 'Smite' }, options: [], free: true },
+          { name: 'psykerLibrarius', selected: '', query: { discipline: 'Librarius' }, options: [], free: true },
+        ],
+      },
+      {
+        name: 'Unlock Disciplines',
+        snippet: 'You gain access to the Minor Universal and Librarius Disciplines. You unlock an additional single Psychic Discipline: Divination, Pyromancy, Telekinesis, Telepathy, Maleficarum',
+        description: '<p>You gain access to the Minor Universal and Librarius Disciplines. You unlock an additional single Psychic Discipline: Divination, Pyromancy, Telekinesis, Telepathy, Maleficarum.</p>',
+        selected: [''],
+        options: [
+          { key: 'core-biomancy', name: 'Biomancy', modifications: [{ targetGroup: 'psychicDisciplines', targetValue: 'Biomancy' }] },
+          { key: 'core-divination', name: 'Divination', modifications: [{ targetGroup: 'psychicDisciplines', targetValue: 'Divination' }] },
+          { key: 'core-pyromancy', name: 'Pyromancy', modifications: [{ targetGroup: 'psychicDisciplines', targetValue: 'Pyromancy' }] },
+          { key: 'core-telekinesis', name: 'Telekinesis', modifications: [{ targetGroup: 'psychicDisciplines', targetValue: 'Telekinesis' }] },
+          { key: 'core-telepathy', name: 'Telepathy', modifications: [{ targetGroup: 'psychicDisciplines', targetValue: 'Telepathy' }] },
+          { key: 'core-maleficarum', name: 'Maleficarum', modifications: [{ targetGroup: 'psychicDisciplines', targetValue: 'Maleficarum' }] },
+        ],
+        psychicDisciplines: [
+          'Minor',
+          'Universal',
+          'Librarius',
+        ],
+      },
+    ],
+    wargear: wargearz('Aquila Mk VII/Aquila Power Armour, Psychic Hood, Bolt Pistol, Force Stave, 3 Frag Grenade, 3 Krak Grenade'),
+    influence: 2,
+  },
+  // p.34 Reiver
+  {
+    ...archetype(source.voab.key, 34, 'Adeptus Astartes', 'Reiver', 4, 'Primaris Astartes'),
+    ...costz(288, [
+      reqAttribute(ATTRIBUTES.STRENGTH, 5),
+      reqAttribute(ATTRIBUTES.TOUGHNESS, 5),
+      reqAttribute(ATTRIBUTES.AGILITY, 4),
+      reqAttribute(ATTRIBUTES.INITIATIVE, 5),
+      reqAttribute(ATTRIBUTES.WILLPOWER, 5),
+      reqAttribute(ATTRIBUTES.INTELLECT, 3),
+      reqSkill(SKILLS.ATHLETICS, 3),
+      reqSkill(SKILLS.AWARENESS, 3),
+      reqSkill(SKILLS.BALLISTIC_SKILL, 4),
+      reqSkill(SKILLS.INTIMIDATION, 3),
+      reqSkill(SKILLS.STEALTH, 3),
+      reqSkill(SKILLS.WEAPON_SKILL, 4),
+    ]),
+    hint: 'Shock and awe... aweeeeee.',
+    keywords: 'Imperium,Adeptus Astartes,Primaris,[Chapter]',
+    archetypeFeatures: [
+      {
+        name: 'Terror Tactics',
+        snippet: 'When your Stealth Score is reduced to 0 or you Ambush a Threat, you can choose for all enemies who can see or hear you to take a Terror Test, with a DN equal to 1+Rank.',
+      },
+    ],
+    wargear: wargearz('Mk X Phobos Power Armour, Bolt Carbine, Heavy Bolt Pistol, Astartes Combat Knife, 3 Frag Grenade, 3 Krak Grenade, 3 Shock Grenade'),
+    influence: 1,
+  },
+  // p.35 Terminator
+  {
+    ...archetype(source.voab.key, 35, 'Adeptus Astartes', 'Terminator', 5, 'Adeptus Astartes'),
+    ...costz(350, [
+      reqAttribute(ATTRIBUTES.STRENGTH, 5),
+      reqAttribute(ATTRIBUTES.TOUGHNESS, 6),
+      reqAttribute(ATTRIBUTES.AGILITY, 4),
+      reqAttribute(ATTRIBUTES.INITIATIVE, 4),
+      reqAttribute(ATTRIBUTES.WILLPOWER, 4),
+      reqAttribute(ATTRIBUTES.INTELLECT, 3),
+      reqSkill(SKILLS.ATHLETICS, 3),
+      reqSkill(SKILLS.AWARENESS, 3),
+      reqSkill(SKILLS.BALLISTIC_SKILL, 5),
+      reqSkill(SKILLS.WEAPON_SKILL, 5),
+      reqSkill(SKILLS.LEADERSHIP, 2),
+      reqSkill(SKILLS.SURVIVAL, 2),
+    ]),
+    hint: 'A walking tank, the ultimate heavy infantry.',
+    keywords: 'Imperium,Adeptus Astartes,[Chapter]',
+    archetypeFeatures: [
+      {
+        name: 'Unstoppable Advance',
+        snippet: 'You ignore the effects of being Hindered and may always move your full Speed, even in Difficult Terrain. You gain +Rank bonus dice to Resilience Tests against Mortal Wounds.',
+      },
+    ],
+    wargear: wargearz('Terminator Armour, Storm Bolter, Power Fist or Chainfist, Crux Terminatus, 3 Krak Grenade'),
+    influence: 3,
+  },
+  // p.36 Tech Marine
+  {
+    ...archetype(source.voab.key, 36, 'Adeptus Astartes', 'Tech Marine', 4, 'Adeptus Astartes'),
+    ...costz(277, [
+      reqAttribute(ATTRIBUTES.STRENGTH, 4),
+      reqAttribute(ATTRIBUTES.TOUGHNESS, 5),
+      reqAttribute(ATTRIBUTES.AGILITY, 5),
+      reqAttribute(ATTRIBUTES.INITIATIVE, 4),
+      reqAttribute(ATTRIBUTES.WILLPOWER, 3),
+      reqAttribute(ATTRIBUTES.INTELLECT, 5),
+      reqSkill(SKILLS.ATHLETICS, 3),
+      reqSkill(SKILLS.AWARENESS, 3),
+      reqSkill(SKILLS.BALLISTIC_SKILL, 4),
+      reqSkill(SKILLS.SCHOLAR, 2),
+      reqSkill(SKILLS.STEALTH, 3),
+      reqSkill(SKILLS.TECH, 4),
+      reqSkill(SKILLS.WEAPON_SKILL, 4),
+    ]),
+    hint: 'A master of machines and battlefield repairs.',
+    keywords: 'Imperium,Adeptus Astartes,[Chapter],Adeptus Mechanicus',
+    archetypeFeatures: [
+      {
+        name: 'Rite of Repair',
+        snippet: 'You receive +Double Rank to Tech (Int) Tests to repair damaged machinery. All Tech (Int) Tests you make take half the standard time.',
+        modifications: [
+          { targetGroup: 'skills', targetValue: SKILLS.TECH, modifier: 0, rank: 2, condition: 'when repairing damaged machinery' },
+        ],
+      },
+    ],
+    wargear: wargearz('Aquila Mk VII/Aquila Power Armour, Boltgun, Bolt Pistol, Astartes Combat Knife, 3 Frag Grenade, 3 Krak Grenade, Servo-arm, Omnissian Power Axe'),
+    influence: 2,
+  },
+  // p.37 Lieutenant
+  {
+    ...archetype(source.voab.key, 37, 'Adeptus Astartes', 'Lieutenant', 5, 'Adeptus Astartes'),
+    ...costz(320, [
+      reqAttribute(ATTRIBUTES.STRENGTH, 5),
+      reqAttribute(ATTRIBUTES.TOUGHNESS, 5),
+      reqAttribute(ATTRIBUTES.AGILITY, 5),
+      reqAttribute(ATTRIBUTES.INITIATIVE, 5),
+      reqAttribute(ATTRIBUTES.WILLPOWER, 4),
+      reqAttribute(ATTRIBUTES.INTELLECT, 3),
+      reqAttribute(ATTRIBUTES.FELLOWSHIP, 3),
+      reqSkill(SKILLS.ATHLETICS, 3),
+      reqSkill(SKILLS.AWARENESS, 3),
+      reqSkill(SKILLS.BALLISTIC_SKILL, 5),
+      reqSkill(SKILLS.LEADERSHIP, 4),
+      reqSkill(SKILLS.SCHOLAR, 2),
+      reqSkill(SKILLS.STEALTH, 3),
+      reqSkill(SKILLS.WEAPON_SKILL, 5),
+    ]),
+    hint: 'A battlefield leader, inspiring those around him.',
+    keywords: 'Imperium,Adeptus Astartes,[Chapter]',
+    archetypeFeatures: [
+      {
+        name: 'Tactical Precision',
+        snippet: 'Allies within 10m gain +Rank bonus dice to Attack Tests. Once per session, you may allow an ally within 10m to reroll a failed Test.',
+      },
+    ],
+    wargear: wargearz('Aquila Mk VII/Aquila Power Armour, Master-crafted Boltgun, Power Sword, Bolt Pistol, 3 Frag Grenade, 3 Krak Grenade, Signum'),
+    influence: 2,
+  },
+  // p.38 Bladeguard Veteran
+  {
+    ...archetype(source.voab.key, 38, 'Adeptus Astartes', 'Bladeguard Veteran', 5, 'Primaris Astartes'),
+    ...costz(340, [
+      reqAttribute(ATTRIBUTES.STRENGTH, 5),
+      reqAttribute(ATTRIBUTES.TOUGHNESS, 6),
+      reqAttribute(ATTRIBUTES.AGILITY, 4),
+      reqAttribute(ATTRIBUTES.INITIATIVE, 4),
+      reqAttribute(ATTRIBUTES.WILLPOWER, 4),
+      reqAttribute(ATTRIBUTES.INTELLECT, 3),
+      reqSkill(SKILLS.ATHLETICS, 3),
+      reqSkill(SKILLS.AWARENESS, 3),
+      reqSkill(SKILLS.BALLISTIC_SKILL, 4),
+      reqSkill(SKILLS.WEAPON_SKILL, 6),
+      reqSkill(SKILLS.LEADERSHIP, 2),
+      reqSkill(SKILLS.SURVIVAL, 2),
+    ]),
+    hint: 'A master of the sword and shield.',
+    keywords: 'Imperium,Adeptus Astartes,Primaris,[Chapter]',
+    archetypeFeatures: [
+      {
+        name: 'Shield of the Imperium',
+        snippet: 'You and adjacent allies gain +Rank Defence. When you take the Full Defence action, you may protect one adjacent ally, granting them the same bonus.',
+      },
+    ],
+    wargear: wargearz('Gravis Armour, Master-crafted Power Sword, Storm Shield, Heavy Bolt Pistol, 3 Frag Grenade, 3 Krak Grenade'),
+    influence: 2,
+  },
+  // p.39 Company Ancient
+  {
+    ...archetype(source.voab.key, 39, 'Adeptus Astartes', 'Company Ancient', 5, 'Adeptus Astartes'),
+    ...costz(330, [
+      reqAttribute(ATTRIBUTES.STRENGTH, 4),
+      reqAttribute(ATTRIBUTES.TOUGHNESS, 5),
+      reqAttribute(ATTRIBUTES.AGILITY, 5),
+      reqAttribute(ATTRIBUTES.INITIATIVE, 5),
+      reqAttribute(ATTRIBUTES.WILLPOWER, 3),
+      reqAttribute(ATTRIBUTES.INTELLECT, 3),
+      reqSkill(SKILLS.ATHLETICS, 3),
+      reqSkill(SKILLS.AWARENESS, 3),
+      reqSkill(SKILLS.BALLISTIC_SKILL, 5),
+      reqSkill(SKILLS.LEADERSHIP, 3),
+      reqSkill(SKILLS.SCHOLAR, 1),
+      reqSkill(SKILLS.STEALTH, 3),
+      reqSkill(SKILLS.SURVIVAL, 1),
+      reqSkill(SKILLS.WEAPON_SKILL, 5),
+    ]),
+    hint: 'Bearer of the Chapter’s sacred banner, inspiring all who fight nearby.',
+    keywords: 'Imperium,Adeptus Astartes,[Chapter]',
+    archetypeFeatures: [
+      {
+        name: 'Banner of Heroes',
+        snippet: 'Allies within 10m gain +Rank bonus dice to Resolve and Leadership Tests. Once per session, you may allow an ally within 10m to reroll a failed Test.',
+        modifications: [
+          { targetGroup: 'traits', targetValue: TRAITS.RESOLVE, modifier: 0, rank: 1, condition: 'for allies within 10m' },
+          { targetGroup: 'skills', targetValue: SKILLS.LEADERSHIP, modifier: 0, rank: 1, condition: 'for allies within 10m' },
+        ],
+      },
+    ],
+    wargear: wargearz('Terminator Armour, Storm Bolter, Power Sword, Chapter Banner, Crux Terminatus'),
+    influence: 2,
+  },
+  // p.40 Chaplain (already present, but kept for order)
+  {
+    ...archetype(source.voab.key, '31','Adeptus Astartes','Chaplain',4,'Adeptus Astartes'),
+    ...costz(392,[
+      reqAttribute(ATTRIBUTES.STRENGTH, 5),
+      reqAttribute(ATTRIBUTES.TOUGHNESS, 5),
+      reqAttribute(ATTRIBUTES.AGILITY, 5),
+      reqAttribute(ATTRIBUTES.INITIATIVE, 5),
+      reqAttribute(ATTRIBUTES.WILLPOWER, 5),
+      reqAttribute(ATTRIBUTES.INTELLECT, 3),
+      reqAttribute(ATTRIBUTES.FELLOWSHIP, 3),
+      reqSkill(SKILLS.ATHLETICS, 3),
+      reqSkill(SKILLS.AWARENESS, 3),
+      reqSkill(SKILLS.BALLISTIC_SKILL, 5),
+      reqSkill(SKILLS.INSIGHT, 3),
+      reqSkill(SKILLS.LEADERSHIP, 3),
+      reqSkill(SKILLS.SCHOLAR, 4),
+      reqSkill(SKILLS.STEALTH, 3),
+      reqSkill(SKILLS.SURVIVAL, 1),
+      reqSkill(SKILLS.WEAPON_SKILL, 5),
+    ]),
+    hint: 'Tasked with attending to the spiritual need of you battle-brothers, you guard against ancient transgression in silent vigil',
+    influence: 2,
+    keywords: 'Imperium,Adeptus Astartes,[Chapter]',
+    archetypeFeatures: [
+      {
+        name: 'Chapter Cult',
+        snippet: 'You gain 1 Faith, and can purchase Faith Talents available to characters with the Adeptus Ministorum or the Adeptus Astartes keywords.',
+        description: '<p>You gain 1 Faith, and can purchase Faith Talents available to characters with the Adeptus Ministorum or the Adeptus Astartes keywords.</p><p>As a Combat Action, you may spend 1 Faith to give an ally within hearing distance your [Chapter] keyword for the rest of the scene, with all corresponding effects except those with the Tradition or Gene-seed title, or that provide equipment.</p>',
+        modifications: [
+          { targetGroup: 'resources', targetValue: 'faith', modifier: 1 },
+        ],
+      },
+      {
+        name: 'Spiritual Leader',
+        snippet: 'You are a figure of both reverence and dread to your battle-brothers, inspiring them with your zeal and the promise of redemption.',
+        description: '<p>You are a figure of both reverence and dread to your battle-brothers, inspiring them with your zeal and the promise of redemption. Any allies within 5×Rank metres who share your [CHAPTER] Keyword gain +Rank to Resolve Tests.</p>',
+      },
+      {
+        name: 'Litanies of Battle',
+        snippet: 'Your battle prayers and litanies steel the resolve of your allies and strike fear into the hearts of your enemies.',
+        description: '<p>Your battle prayers and litanies steel the resolve of your allies and strike fear into the hearts of your enemies. As a Simple Action, you may spend 1 Faith to intone a Litany of Battle. Choose an enemy within line of sight - that enemy and all other enemies within 10 meters must make a Fear Test with a DN equal to 1 + your Rank. Additionally, all allies who can hear you gain a +1 bonus to their Damage rolls for melee attacks until the start of your next Turn.</p>',
+      }
+    ],
+    wargear: wargearz('Aquila Mk VII/Aquila Power Armour, Crozius Arcanum, Skull Helm, Bolt Pistol, Rosarius, 3 Frag Grenade, 3 Krak Grenade, Purity Seals, Copy of Chapter Doctrines'),
+  },
+];
+
 const dod = [
   {
     name: 'Scum Psyker',
@@ -7070,6 +7575,7 @@ const hevaRep = [
   archetype(source.heva.key, 10, 'Aeldari', 'Wych', 2, 'heva/Dark Eldar', true),
   archetype(source.heva.key, 11, 'Aeldari', 'Scourge', 3, 'heva/Dark Eldar', true),
   archetype(source.heva.key, 12, 'Aeldari', 'Incubus', 4, 'heva/Dark Eldar', true),
+  archetype(source.heva.key, 12, 'Aeldari', 'Incubus', 4, 'heva/Dark Eldar', true),
 ];
 
 const goenRep = [
@@ -8865,6 +9371,7 @@ const goheRep = [
 
 const archetypeRepository = [
   ...core,
+  ...voab,
   ...fspg,
   ...red2,
   ...aioe,
