@@ -3337,9 +3337,7 @@ const tnh = [
   },
 ];
 
-// ...existing code...
 const voab = [
-  // p.26 Space Marine Scout
   {
     ...archetype(source.voab.key, 26, 'Adeptus Astartes', 'Space Marine Scout', 2, 'Adeptus Astartes'),
     ...costz(170, [
@@ -3384,7 +3382,6 @@ const voab = [
     ],
     influence: 1,
   },
-  // p.27 Tactical Space Marine
   {
     ...archetype(source.voab.key, 27, 'Adeptus Astartes', 'Tactical Space Marine', 3, 'Adeptus Astartes'),
     ...costz(257, [
@@ -3414,7 +3411,6 @@ const voab = [
     wargear: wargearz('Aquila Mk VII/Aquila Power Armour, Boltgun, Bolt Pistol, Astartes Combat Knife, 3 Frag Grenade, 3 Krak Grenade'),
     influence: 2,
   },
-  // p.28 1st Company Veteran
   {
     ...archetype(source.voab.key, 28, 'Adeptus Astartes', '1st Company Veteran', 4, 'Adeptus Astartes'),
     ...costz(330, [
@@ -3444,7 +3440,6 @@ const voab = [
     wargear: wargearz('Terminator Armour, Storm Bolter, Power Sword or Power Fist, Crux Terminatus'),
     influence: 2,
   },
-  // p.29 Apothecary
   {
     ...archetype(source.voab.key, 29, 'Adeptus Astartes', 'Apothecary', 4, 'Adeptus Astartes'),
     ...costz(357, [
@@ -3475,7 +3470,6 @@ const voab = [
     wargear: wargearz('Aquila Mk VII/Aquila Power Armour, Bolt Pistol, Chainsword, 3 Frag Grenade, 3 Krak Grenade, Narthecium, Reductor'),
     influence: 2,
   },
-  // p.30 Eliminator
   {
     ...archetype(source.voab.key, 30, 'Adeptus Astartes', 'Eliminator', 4, 'Primaris Astartes'),
     ...costz(300, [
@@ -3502,7 +3496,6 @@ const voab = [
     wargear: wargearz('Mk X Phobos Power Armour, Bolt Sniper Rifle or Las Fusil, Camo Cloak, Bolt Pistol, Combat Knife, 3 Frag Grenade, 3 Krak Grenade'),
     influence: 2,
   },
-  // p.31 Incursor
   {
     ...archetype(source.voab.key, 31, 'Adeptus Astartes', 'Incursor', 4, 'Primaris Astartes'),
     ...costz(300, [
@@ -3529,7 +3522,6 @@ const voab = [
     wargear: wargearz('Mk X Phobos Power Armour, Occulus Bolt Carbine, Paired Combat Blades, Bolt Pistol, Haywire Mine, 3 Frag Grenade, 3 Krak Grenade'),
     influence: 2,
   },
-  // p.32 Intercessor
   {
     ...archetype(source.voab.key, 32, 'Adeptus Astartes', 'Intercessor', 4, 'Primaris Astartes'),
     ...costz(300, [
@@ -3559,7 +3551,6 @@ const voab = [
     wargear: wargearz('Tacticus Mk X/Mark X Tacticus Power Armour, Bolt Rifle, Heavy Bolt Pistol, Astartes Combat Knife, 3 Frag Grenade, 3 Krak Grenade'),
     influence: 1,
   },
-  // p.33 Librarian
   {
     ...archetype(source.voab.key, 33, 'Adeptus Astartes', 'Librarian', 4, 'Adeptus Astartes'),
     ...costz(359, [
@@ -3614,7 +3605,6 @@ const voab = [
     wargear: wargearz('Aquila Mk VII/Aquila Power Armour, Psychic Hood, Bolt Pistol, Force Stave, 3 Frag Grenade, 3 Krak Grenade'),
     influence: 2,
   },
-  // p.34 Reiver
   {
     ...archetype(source.voab.key, 34, 'Adeptus Astartes', 'Reiver', 4, 'Primaris Astartes'),
     ...costz(288, [
@@ -3642,7 +3632,6 @@ const voab = [
     wargear: wargearz('Mk X Phobos Power Armour, Bolt Carbine, Heavy Bolt Pistol, Astartes Combat Knife, 3 Frag Grenade, 3 Krak Grenade, 3 Shock Grenade'),
     influence: 1,
   },
-  // p.35 Terminator
   {
     ...archetype(source.voab.key, 35, 'Adeptus Astartes', 'Terminator', 5, 'Adeptus Astartes'),
     ...costz(350, [
@@ -3670,7 +3659,6 @@ const voab = [
     wargear: wargearz('Terminator Armour, Storm Bolter, Power Fist or Chainfist, Crux Terminatus, 3 Krak Grenade'),
     influence: 3,
   },
-  // p.36 Tech Marine
   {
     ...archetype(source.voab.key, 36, 'Adeptus Astartes', 'Tech Marine', 4, 'Adeptus Astartes'),
     ...costz(277, [
@@ -3702,7 +3690,6 @@ const voab = [
     wargear: wargearz('Aquila Mk VII/Aquila Power Armour, Boltgun, Bolt Pistol, Astartes Combat Knife, 3 Frag Grenade, 3 Krak Grenade, Servo-arm, Omnissian Power Axe'),
     influence: 2,
   },
-  // p.37 Lieutenant
   {
     ...archetype(source.voab.key, 37, 'Adeptus Astartes', 'Lieutenant', 5, 'Adeptus Astartes'),
     ...costz(320, [
@@ -3732,7 +3719,6 @@ const voab = [
     wargear: wargearz('Aquila Mk VII/Aquila Power Armour, Master-crafted Boltgun, Power Sword, Bolt Pistol, 3 Frag Grenade, 3 Krak Grenade, Signum'),
     influence: 2,
   },
-  // p.38 Bladeguard Veteran
   {
     ...archetype(source.voab.key, 38, 'Adeptus Astartes', 'Bladeguard Veteran', 5, 'Primaris Astartes'),
     ...costz(340, [
@@ -3760,7 +3746,6 @@ const voab = [
     wargear: wargearz('Gravis Armour, Master-crafted Power Sword, Storm Shield, Heavy Bolt Pistol, 3 Frag Grenade, 3 Krak Grenade'),
     influence: 2,
   },
-  // p.39 Company Ancient
   {
     ...archetype(source.voab.key, 39, 'Adeptus Astartes', 'Company Ancient', 5, 'Adeptus Astartes'),
     ...costz(330, [
@@ -3794,7 +3779,6 @@ const voab = [
     wargear: wargearz('Terminator Armour, Storm Bolter, Power Sword, Chapter Banner, Crux Terminatus'),
     influence: 2,
   },
-  // p.40 Chaplain (already present, but kept for order)
   {
     ...archetype(source.voab.key, '31','Adeptus Astartes','Chaplain',4,'Adeptus Astartes'),
     ...costz(392,[
