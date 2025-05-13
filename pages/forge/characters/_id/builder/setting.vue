@@ -445,9 +445,8 @@ export default {
         },
         {
           show: true,
-          disabled: true,
-          optional: false, // always active
-
+          disabled: false,
+          optional: true, // always active
           key: 'voab',
           name: 'Vow of Absolution',
           hint: 'Add new options for the Astartes.',

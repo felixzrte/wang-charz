@@ -112,7 +112,7 @@ export default {
         'core',
         'fspg',
         'red1',
-        'voab',
+        // 'voab',
         'cos',
         ...this.settingHomebrews
       ];
