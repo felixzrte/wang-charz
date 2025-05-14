@@ -1743,6 +1743,81 @@ const goen = [
   simpleStub('goen', 9, 'The Titan walks', 'Gain a ship, but it can\'t fly, has feet and is a Titan and not a ship.'),
 ];
 
+const voab = [
+  {
+    name: 'Battle Company Doctrine',
+    ...simpleStub(source.voab.key, 43,'Battle Company Doctrine','', false),
+    cost: 60,
+    minimumCampaignTier: 3,
+    prerequisites: ['Adeptus Astartes Species'],
+    // Benefits
+    influenceBonus: 2,
+    storyElementDescription:
+      '<p>You have battled across countless worlds and faced all manner of heretics and xenos threats. You have mastered numerous weapons and and your skills and conviction has earned you a place amongst a Battle Company of the Chapter.</p>',
+    ascensionFeatures: [
+      {
+        key: 'talent-choice',
+        name: 'Talent Choice',
+        snippet: 'You gain a Talent of your choice from the list below.',
+        optionsPlaceholder: 'Talent choice',
+        selected: [''],
+        options: [
+          {
+            key: 'built-tough',
+            name: 'Built Tough',
+            snippet: 'You get the Built Tough talent.',
+            modifications: [
+              { targetGroup: 'talents', targetValue: 'voab-built-tough', meta: { name: 'Built Tough' } },
+            ],
+          },
+          {
+            key: 'chainsaw-warrior',
+            name: 'Chainsaw Warrior',
+            snippet: 'You get the Chainsaw Warrior talent.',
+            modifications: [
+              { targetGroup: 'talents', targetValue: 'voab-chainsaw-warrior', meta: { name: 'Chainsaw Warrior' } },
+            ],
+          },
+        ],
+      },
+      {
+        key: 'bolter-discipline',
+        name: 'Bolter Discipline Talent',
+        snippet: 'You gain the Bolter Discipline talent.',
+        modifications: [
+          { targetGroup: 'talents', targetValue: 'voab-bolter-discipline', meta: { name: 'Bolter Discipline' } },
+        ],
+      },
+      {
+        key: 'hatred',
+        name: 'Hatred Talent',
+        snippet: 'You gain the Hatred Talent against a diferent enemy if you already possess one.',
+        modifications: [
+          { targetGroup: 'talents', targetValue: 'core-hatred', meta: { name: 'Hatred [Any]' } },
+        ],
+      },
+      {
+        key: 'wargear',
+        name: 'Wargear',
+        snippet: 'You gain one item of uncommon rarity.',
+        wargear: [
+          {
+            name: 'A item, Uncommon',
+            selected: '',
+            options: [
+              {
+                filter: true,
+                valueFilter: { useCharacterTier: false, useSettingTier: false, useAscensionTargetTier: true, fixedValue: 3 },
+                rarityFilter: ['Uncommon'],
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+]
+
 module.exports = [
   ...core,
   ...red2,
@@ -1753,4 +1828,5 @@ module.exports = [
   ...thaot,
   ...sotah,
   ...goen,
+  ...voab,
 ];

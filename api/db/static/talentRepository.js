@@ -2716,7 +2716,7 @@ const aaoa = [
 
 const voab = [
   {
-    ...talent('voab',44,'Adaptive Strategy',20),
+    ...talent(source.voab.key,44,'Adaptive Strategy',20),
     key: stringToKebab('voab adaptive strategy'),
     snippet: 'When spending Wrath on Narrative Declarations, roll a die. On an Icon, keep your Wrath point.',
     description: 
@@ -2729,7 +2729,7 @@ const voab = [
     ],
   },
   {
-    ...talent('voab',45,'Armour of Contempt',30),
+    ...talent(source.voab.key,45,'Armour of Contempt',30),
     key: stringToKebab('voab armour of contempt'),
     snippet: 'Use Wrath to roll Determination against Mortal Wounds.',
     description: 
@@ -2741,7 +2741,7 @@ const voab = [
     ],
   },
   {
-    ...talent('voab',45,'Bolter Discipline',20),
+    ...talent(source.voab.key,45,'Bolter Discipline',20),
     key: stringToKebab('voab bolter discipline'),
     snippet: 'BOLT weapons gain Rapid Fire(2), or add +Rank to existing Rapid Fire rating.',
     description: 
@@ -2752,7 +2752,7 @@ const voab = [
     ],
   },
   {
-    ...talent('voab',46,'Codex Innovator',20),
+    ...talent(source.voab.key,46,'Codex Innovator',20),
     key: stringToKebab('voab codex innovator'),
     snippet: 'When using Help action, grant +Double Rank bonus dice instead of +1.',
     description: 
@@ -2764,7 +2764,7 @@ const voab = [
     ],
   },
   {
-    ...talent('voab',46,'Codex Duelist',20),
+    ...talent(source.voab.key,46,'Codex Duelist',20),
     key: stringToKebab('voab codex duelist'),
     snippet: 'In single combat, gain +1 Defence and +Rank to melee attacks against your opponent.',
     description: 
@@ -2776,7 +2776,7 @@ const voab = [
     ],
   },
   {
-    ...talent('voab',46,'Echo of Sanguinius',20),
+    ...talent(source.voab.key,46,'Echo of Sanguinius',20),
     key: stringToKebab('voab echo of sanguinius'),
     snippet: 'After a successful Charge, make an additional melee attack as a Free Action.',
     description: 
@@ -2788,7 +2788,7 @@ const voab = [
     ],
   },
   {
-    ...talent('voab',46,'Fear Made Manifest',20),
+    ...talent(source.voab.key,46,'Fear Made Manifest',20),
     key: stringToKebab('voab fear made manifest'),
     snippet: 'Enemies within 10m who can see you suffer +1 DN to all tests.',
     description: 
@@ -2800,7 +2800,7 @@ const voab = [
     ],
   },
   {
-    ...talent('voab',47,'Gene-Wrought Might',20),
+    ...talent(source.voab.key,47,'Gene-Wrought Might',20),
     key: stringToKebab('voab gene-wrought might'),
     snippet: 'Add +Double Rank ED when using the All-Out Attack combat option.',
     description: 
@@ -2812,7 +2812,7 @@ const voab = [
     ],
   },
   {
-    ...talent('voab',47,'Chainsaw Warrior',20),
+    ...talent(source.voab.key,47,'Chainsaw Warrior',20),
     key: stringToKebab('voab chainsaw warrior'),
     snippet: 'Reroll damage dice with CHAIN weapons. When you roll a 6 on attack, target suffers Bleeding.',
     description: 
@@ -2823,7 +2823,7 @@ const voab = [
     ],
   },
   {
-    ...talent('voab',47,'Built Tough',20),
+    ...talent(source.voab.key,47,'Built Tough',20, ''),
     key: stringToKebab('voab built tough'),
     snippet: 'Heavy weapons reduce their Heavy rating by your Rank (to a minimum of 1).',
     description: 
@@ -2835,7 +2835,7 @@ const voab = [
     ],
   },
   {
-    ...talent('voab',47,'Gilead Combat Veteran',20),
+    ...talent(source.voab.key,47,'Gilead Combat Veteran',20),
     key: stringToKebab('voab gilead combat veteran'),
     snippet: 'When using a GILEAD weapon, add +Rank to damage and you may reroll one damage die.',
     description: 
@@ -2847,7 +2847,7 @@ const voab = [
     ],
   },
   {
-    ...talent('voab',47,'Hammer of Wrath',20),
+    ...talent(source.voab.key,47,'Hammer of Wrath',20),
     key: stringToKebab('voab hammer of wrath'),
     snippet: 'When you Charge using a Jump Pack, enemies within 2m suffer mortal wounds equal to your Strength.',
     description: 
@@ -2859,7 +2859,7 @@ const voab = [
     ],
   },
   {
-    ...talent('voab',47,'Inner Circle Secrets',20),
+    ...talent(source.voab.key,47,'Inner Circle Secrets',20),
     key: stringToKebab('voab inner circle secrets'),
     snippet: 'You are immune to Fear and Intimidation from CHAOS sources. Add +Rank to Resolve tests and Determination rolls against psychic powers.',
     description: 
@@ -2871,7 +2871,7 @@ const voab = [
     ],
   },
   {
-    ...talent('voab',48,'Legacy of the Primarch',30),
+    ...talent(source.voab.key,48,'Legacy of the Primarch',30),
     key: stringToKebab('voab legacy of the primarch'),
     snippet: 'Choose a Legion trait related to your Chapter\'s Primarch. Gain +Double Rank bonus to associated rolls.',
     description: 
@@ -2883,7 +2883,7 @@ const voab = [
     ],
   },
   {
-    ...talent('voab',48,'Mortal Understanding',15),
+    ...talent(source.voab.key,48,'Mortal Understanding',15),
     key: stringToKebab('voab mortal understanding'),
     snippet: '+Double Rank to social skills when interacting with unaugmented humans. Reduce penalties for intimidating presence.',
     description: 
@@ -2895,7 +2895,7 @@ const voab = [
     ],
   },
   {
-    ...talent('voab',48,'Pain Glove Endurant',20),
+    ...talent(source.voab.key,48,'Pain Glove Endurant',20),
     key: stringToKebab('voab pain glove endurant'),
     snippet: 'You may roll Determination against Agonizing damage and gain +Rank to these rolls.',
     description: 
@@ -2907,7 +2907,7 @@ const voab = [
     ],
   },
   {
-    ...talent('voab',48,'Rapid Assault',25),
+    ...talent(source.voab.key,48,'Rapid Assault',25),
     key: stringToKebab('voab rapid assault'),
     snippet: 'After a successful Charge, you may immediately make a single Combat Action without spending Glory.',
     description: 
@@ -2920,7 +2920,7 @@ const voab = [
     ],
   },
   {
-    ...talent('voab',48,'Raiding Master',20),
+    ...talent(source.voab.key,48,'Raiding Master',20),
     key: stringToKebab('voab raiding master'),
     snippet: '+Rank to Stealth and initiative tests during ambushes. First attack against unaware enemies adds +2 ED.',
     description: 
@@ -2932,7 +2932,7 @@ const voab = [
     ],
   },
   {
-    ...talent('voab',48,'Scion of the Forge',20),
+    ...talent(source.voab.key,48,'Scion of the Forge',20),
     key: stringToKebab('voab scion of the forge'),
     snippet: '+Rank to Tech tests when working on weapons/armor. Items you craft gain +1 to one profile stat.',
     description: 
@@ -2944,7 +2944,7 @@ const voab = [
     ],
   },
   {
-    ...talent('voab',48,'Skilled Rider',15),
+    ...talent(source.voab.key,48,'Skilled Rider',15),
     key: stringToKebab('voab skilled rider'),
     snippet: '+Double Rank to Pilot tests with bikes/speeders. Reduce difficult terrain penalties when mounted.',
     description: 
@@ -2956,7 +2956,7 @@ const voab = [
     ],
   },
   {
-    ...talent('voab',49,'Spirit of the Pack',20),
+    ...talent(source.voab.key,49,'Spirit of the Pack',20),
     key: stringToKebab('voab spirit of the pack'),
     snippet: 'Grant +Rank bonus dice to up to Rank allies within 10m for Resolve and Fear Tests.',
     description: 
@@ -2968,7 +2968,7 @@ const voab = [
     ],
   },
   {
-    ...talent('voab',49,'Strength from Steel',20),
+    ...talent(source.voab.key,49,'Strength from Steel',20),
     key: stringToKebab('voab strength from steel'),
     snippet: 'When equipping new cybernetic implants, gain +Rank to related attribute for 24 hours.',
     description: 
@@ -2980,7 +2980,7 @@ const voab = [
     ],
   },
   {
-    ...talent('voab',49,'Transhuman Physiology',25),
+    ...talent(source.voab.key,49,'Transhuman Physiology',25),
     key: stringToKebab('voab transhuman physiology'),
     snippet: 'When targeted by an attack with ED 4 or less, increase DN of the attack by +Rank.',
     description: 
@@ -2992,7 +2992,7 @@ const voab = [
     ],
   },
   {
-    ...talent('voab',49,'Whirlwind of Rage',20),
+    ...talent(source.voab.key,49,'Whirlwind of Rage',20),
     key: stringToKebab('voab whirlwind of rage'),
     snippet: 'When you roll a 6 on your Wrath die in melee, make an additional attack. Can trigger once per turn.',
     description: 
@@ -3004,7 +3004,7 @@ const voab = [
     ],
   },
   {
-    ...talent('voab',49,'Wise Orator',20),
+    ...talent(source.voab.key,49,'Wise Orator',20),
     key: stringToKebab('voab wise orator'),
     snippet: '+Double Rank to Leadership and Persuasion tests when addressing groups. Inspire troops after successful oratory.',
     description: 
@@ -3017,7 +3017,7 @@ const voab = [
     ],
   },
   {
-    ...talent('voab',49,'Wraith-Slipping',25),
+    ...talent(source.voab.key,49,'Wraith-Slipping',25),
     key: stringToKebab('voab wraith-slipping'),
     snippet: 'Once per combat, become hidden to any observer not within 5m. Gain +Rank to your next attack if undetected.',
     description: 
@@ -3029,7 +3029,7 @@ const voab = [
     ],
   },
   {
-    ...talent('voab',49,'Uncompromising Fire',20),
+    ...talent(source.voab.key,49,'Uncompromising Fire',20),
     key: stringToKebab('voab uncompromising fire'),
     snippet: 'When using Storm of Fire combat option, negate the -2 ED penalty and add +Rank bonus dice to the attack.',
     description: 
