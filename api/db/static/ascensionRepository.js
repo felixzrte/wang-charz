@@ -1748,10 +1748,12 @@ const voab = [
     name: 'Battle Company Doctrine',
     ...simpleStub(source.voab.key, 43,'Battle Company Doctrine','', false),
     cost: 60,
+    costPerTier: 0,
     minimumCampaignTier: 3,
     prerequisites: ['Adeptus Astartes Species'],
     // Benefits
     influenceBonus: 2,
+    influencePerTier: 0,
     storyElementDescription:
       '<p>You have battled across countless worlds and faced all manner of heretics and xenos threats. You have mastered numerous weapons and and your skills and conviction has earned you a place amongst a Battle Company of the Chapter.</p>',
     ascensionFeatures: [
@@ -1799,7 +1801,6 @@ const voab = [
       {
         key: 'wargear',
         name: 'Wargear',
-        snippet: 'You gain one item of uncommon rarity.',
         wargear: [
           {
             name: 'A item, Uncommon',
