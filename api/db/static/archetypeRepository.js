@@ -3435,6 +3435,9 @@ const voab = [
       {
         name: 'Master of Warfare',
         snippet: 'Add 1 to the damage of all weapons.',
+        modifications: [
+          { targetGroup: 'weapons', targetValue: 'all', modifier: 1, property: 'damage' },
+        ],
       },
     ],
     wargear: wargearz('Terminator Armour, Storm Bolter, Power Sword or Power Fist, Crux Terminatus'),
@@ -3465,6 +3468,9 @@ const voab = [
       {
         name: 'Prime Helix',
         snippet: 'When you succeed on a Medicae Test to heal a target’s Wounds, they recover +Rank additional Wounds.',
+        modifications: [
+          { targetGroup: 'skills', targetValue: SKILLS.MEDICAE, modifier: 0, rank: 1, condition: 'when healing Wounds with Medicae' },
+        ],
       },
     ],
     wargear: wargearz('Aquila Mk VII/Aquila Power Armour, Bolt Pistol, Chainsword, 3 Frag Grenade, 3 Krak Grenade, Narthecium, Reductor'),
@@ -3491,6 +3497,9 @@ const voab = [
       {
         name: 'Silent Death',
         snippet: 'You gain +Double Rank bonus dice to Ballistic Skill Tests when attacking from Stealth. When you inflict a Critical Hit with a ranged attack, you may choose to remain hidden.',
+        modifications: [
+          { targetGroup: 'skills', targetValue: SKILLS.BALLISTIC_SKILL, modifier: 0, rank: 2, condition: 'when attacking from Stealth' },
+        ],
       },
     ],
     wargear: wargearz('Mk X Phobos Power Armour, Bolt Sniper Rifle or Las Fusil, Camo Cloak, Bolt Pistol, Combat Knife, 3 Frag Grenade, 3 Krak Grenade'),
@@ -3517,6 +3526,10 @@ const voab = [
       {
         name: 'Forward Deploy',
         snippet: 'You may always act in the first round of combat, even if surprised. You gain +Rank bonus dice to Stealth and Awareness Tests during the first round of combat.',
+        modifications: [
+          { targetGroup: 'skills', targetValue: SKILLS.STEALTH, modifier: 0, rank: 1, condition: 'during the first round of combat' },
+          { targetGroup: 'skills', targetValue: SKILLS.AWARENESS, modifier: 0, rank: 1, condition: 'during the first round of combat' },
+        ],
       },
     ],
     wargear: wargearz('Mk X Phobos Power Armour, Occulus Bolt Carbine, Paired Combat Blades, Bolt Pistol, Haywire Mine, 3 Frag Grenade, 3 Krak Grenade'),
@@ -3627,6 +3640,9 @@ const voab = [
       {
         name: 'Terror Tactics',
         snippet: 'When your Stealth Score is reduced to 0 or you Ambush a Threat, you can choose for all enemies who can see or hear you to take a Terror Test, with a DN equal to 1+Rank.',
+        modifications: [
+          { targetGroup: 'skills', targetValue: SKILLS.INTIMIDATION, modifier: 0, rank: 1, condition: 'when using Terror Tactics' },
+        ],
       },
     ],
     wargear: wargearz('Mk X Phobos Power Armour, Bolt Carbine, Heavy Bolt Pistol, Astartes Combat Knife, 3 Frag Grenade, 3 Krak Grenade, 3 Shock Grenade'),
@@ -3654,6 +3670,9 @@ const voab = [
       {
         name: 'Unstoppable Advance',
         snippet: 'You ignore the effects of being Hindered and may always move your full Speed, even in Difficult Terrain. You gain +Rank bonus dice to Resilience Tests against Mortal Wounds.',
+        modifications: [
+          { targetGroup: 'traits', targetValue: TRAITS.RESILIENCE, modifier: 0, rank: 1, condition: 'against Mortal Wounds' },
+        ],
       },
     ],
     wargear: wargearz('Terminator Armour, Storm Bolter, Power Fist or Chainfist, Crux Terminatus, 3 Krak Grenade'),
@@ -3714,6 +3733,9 @@ const voab = [
       {
         name: 'Tactical Precision',
         snippet: 'Allies within 10m gain +Rank bonus dice to Attack Tests. Once per session, you may allow an ally within 10m to reroll a failed Test.',
+        modifications: [
+          { targetGroup: 'skills', targetValue: 'allAttacks', modifier: 0, rank: 1, condition: 'for allies within 10m' },
+        ],
       },
     ],
     wargear: wargearz('Aquila Mk VII/Aquila Power Armour, Master-crafted Boltgun, Power Sword, Bolt Pistol, 3 Frag Grenade, 3 Krak Grenade, Signum'),
@@ -3741,6 +3763,9 @@ const voab = [
       {
         name: 'Shield of the Imperium',
         snippet: 'You and adjacent allies gain +Rank Defence. When you take the Full Defence action, you may protect one adjacent ally, granting them the same bonus.',
+        modifications: [
+          { targetGroup: 'traits', targetValue: TRAITS.DEFENCE, modifier: 0, rank: 1, condition: 'for you and adjacent allies' },
+        ],
       },
     ],
     wargear: wargearz('Gravis Armour, Master-crafted Power Sword, Storm Shield, Heavy Bolt Pistol, 3 Frag Grenade, 3 Krak Grenade'),
@@ -3815,11 +3840,17 @@ const voab = [
         name: 'Spiritual Leader',
         snippet: 'You are a figure of both reverence and dread to your battle-brothers, inspiring them with your zeal and the promise of redemption.',
         description: '<p>You are a figure of both reverence and dread to your battle-brothers, inspiring them with your zeal and the promise of redemption. Any allies within 5×Rank metres who share your [CHAPTER] Keyword gain +Rank to Resolve Tests.</p>',
+        modifications: [
+          { targetGroup: 'traits', targetValue: TRAITS.RESOLVE, modifier: 0, rank: 1, condition: 'for allies within 5×Rank metres who share your [CHAPTER] Keyword' },
+        ],
       },
       {
         name: 'Litanies of Battle',
         snippet: 'Your battle prayers and litanies steel the resolve of your allies and strike fear into the hearts of your enemies.',
         description: '<p>Your battle prayers and litanies steel the resolve of your allies and strike fear into the hearts of your enemies. As a Simple Action, you may spend 1 Faith to intone a Litany of Battle. Choose an enemy within line of sight - that enemy and all other enemies within 10 meters must make a Fear Test with a DN equal to 1 + your Rank. Additionally, all allies who can hear you gain a +1 bonus to their Damage rolls for melee attacks until the start of your next Turn.</p>',
+        modifications: [
+          { targetGroup: 'weapons', targetValue: 'melee', modifier: 1, property: 'damage', condition: 'for allies who can hear you until the start of your next Turn after Litany' },
+        ],
       }
     ],
     wargear: wargearz('Aquila Mk VII/Aquila Power Armour, Crozius Arcanum, Skull Helm, Bolt Pistol, Rosarius, 3 Frag Grenade, 3 Krak Grenade, Purity Seals, Copy of Chapter Doctrines'),
