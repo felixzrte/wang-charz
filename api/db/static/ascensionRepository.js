@@ -1817,6 +1817,246 @@ const voab = [
       },
     ],
   },
+  {
+    name: 'Crux Terminatus',
+    ...simpleStub(source.voab.key, 43, 'Crux Terminatus', 'Veteran of the 1st Company, bearer of the Crux Terminatus.', false),
+    cost: 60,
+    costPerTier: 0,
+    minimumCampaignTier: 0,
+    prerequisites: [
+      '1st Company Veteran, Chaplain or Librarian Archetype',
+    ],
+    influenceBonus: 2,
+    influencePerTier: 0,
+    keywordString: 'Adeptus Astartes',
+    storyElementDescription:
+      '<p>A 1st Company Veteran, Librarian, or Chaplain may begin with Terminator armour. Terminator armour comes with the following weapon combinations:</p>',
+    ascensionFeatures: [
+      {
+        key: 'terminator-armour-requisition',
+        name: 'Terminator Armour Requisition',
+        snippet: 'The character may request a Terminator Armour and accompanying Weapons or may begin the mission with +1 Wrath.',
+        description:
+          '<p>You  may begin with Terminator armour. Terminator armour comes with the following weapon combinations:</p>',
+        modifications: [
+          { targetGroup: 'wargear', targetValue: 'voab-terminator-armour', meta: { name: 'Terminator Armour' } },
+        ]
+      },
+      {
+        key: 'terminator-weapon-combinations',
+        name: 'Terminator Weapon Combinations',
+        selected: '',
+        options: [
+          {
+            key: 'lightning-claws',
+            name: 'Lightning Claws',
+            snippet: 'You gain a pair of Lightning Claws as your terminator weapons.',
+            modifications: [
+              { targetGroup: 'wargear', targetValue: 'aaoa-lightning-claw', meta: { name: 'Lightning Claw' } },
+              { targetGroup: 'wargear', targetValue: 'aaoa-lightning-claw', meta: { name: 'Lightning Claw' } },
+            ],
+          },
+          {
+            key: 'power-fist-storm-bolter',
+            name: 'Power Fist & Storm Bolter',
+            snippet: 'You gain a Power Fist and a Storm Bolter.',
+            modifications: [
+              { targetGroup: 'wargear', targetValue: 'power-fist', meta: { name: 'Power Fist' } },
+              { targetGroup: 'wargear', targetValue: 'storm-bolter', meta: { name: 'Storm Bolter' } },
+            ],
+          },
+          {
+            key: 'power-fist-heavy-flamer',
+            name: 'Power Fist & Heavy Flamer',
+            snippet: 'You gain a Power Fist and a Heavy Flamer.',
+            modifications: [
+              { targetGroup: 'wargear', targetValue: 'power-fist', meta: { name: 'Power Fist' } },
+              { targetGroup: 'wargear', targetValue: 'heavy-flamer', meta: { name: 'Heavy Flamer' } },
+            ],
+          },
+          {
+            key: 'power-fist-assault-cannon',
+            name: 'Power Fist & Assault Cannon',
+            snippet: 'You gain a Power Fist and an Assault Cannon.',
+            modifications: [
+              { targetGroup: 'wargear', targetValue: 'power-fist', meta: { name: 'Power Fist' } },
+              { targetGroup: 'wargear', targetValue: 'assault-cannon', meta: { name: 'Assault Cannon' } },
+            ],
+          },
+          {
+            key: 'chainfist-storm-bolter',
+            name: 'Chainfist & Storm Bolter',
+            snippet: 'You gain a Chainfist and a Storm Bolter.',
+            modifications: [
+              { targetGroup: 'wargear', targetValue: 'chainfist', meta: { name: 'Chainfist' } },
+              { targetGroup: 'wargear', targetValue: 'storm-bolter', meta: { name: 'Storm Bolter' } },
+            ],
+          },
+          {
+            key: 'chainfist-heavy-flamer',
+            name: 'Chainfist & Heavy Flamer',
+            snippet: 'You gain a Chainfist and a Heavy Flamer.',
+            modifications: [
+              { targetGroup: 'wargear', targetValue: 'chainfist', meta: { name: 'Chainfist' } },
+              { targetGroup: 'wargear', targetValue: 'heavy-flamer', meta: { name: 'Heavy Flamer' } },
+            ],
+          },
+          {
+            key: 'chainfist-assault-cannon',
+            name: 'Chainfist & Assault Cannon',
+            snippet: 'You gain a Chainfist and an Assault Cannon.',
+            modifications: [
+              { targetGroup: 'wargear', targetValue: 'chainfist', meta: { name: 'Chainfist' } },
+              { targetGroup: 'wargear', targetValue: 'assault-cannon', meta: { name: 'Assault Cannon' } },
+            ],
+          },
+          {
+            key: 'power-sword-storm-bolter',
+            name: 'Power Sword & Storm Bolter',
+            snippet: 'You gain a Power Sword and a Storm Bolter.',
+            modifications: [
+              { targetGroup: 'wargear', targetValue: 'power-sword', meta: { name: 'Power Sword' } },
+              { targetGroup: 'wargear', targetValue: 'storm-bolter', meta: { name: 'Storm Bolter' } },
+            ],
+          },
+          {
+            key: 'power-sword-heavy-flamer',
+            name: 'Power Sword & Heavy Flamer',
+            snippet: 'You gain a Power Sword and a Heavy Flamer.',
+            modifications: [
+              { targetGroup: 'wargear', targetValue: 'power-sword', meta: { name: 'Power Sword' } },
+              { targetGroup: 'wargear', targetValue: 'heavy-flamer', meta: { name: 'Heavy Flamer' } },
+            ],
+          },
+          {
+            key: 'power-sword-assault-cannon',
+            name: 'Power Sword & Assault Cannon',
+            snippet: 'You gain a Power Sword and an Assault Cannon.',
+            modifications: [
+              { targetGroup: 'wargear', targetValue: 'power-sword', meta: { name: 'Power Sword' } },
+              { targetGroup: 'wargear', targetValue: 'assault-cannon', meta: { name: 'Assault Cannon' } },
+            ],
+          },
+          {
+            key: 'crozius-arcanum-storm-bolter',
+            name: '[ONLY FOR CHAPLAIN] Crozius Arcanum & Storm Bolter',
+            snippet: 'You gain a Crozius Arcanum and a Storm Bolter.',
+            modifications: [
+              { targetGroup: 'wargear', targetValue: 'crozius-arcanum', meta: { name: 'Crozius Arcanum' } },
+              { targetGroup: 'wargear', targetValue: 'storm-bolter', meta: { name: 'Storm Bolter' } },
+            ],
+          },
+          {
+            key: 'crozius-arcanum-heavy-flamer',
+            name: '[ONLY FOR CHAPLAIN] Crozius Arcanum & Heavy Flamer',
+            snippet: 'You gain a Crozius Arcanum and a Heavy Flamer.',
+            modifications: [
+              { targetGroup: 'wargear', targetValue: 'crozius-arcanum', meta: { name: 'Crozius Arcanum' } },
+              { targetGroup: 'wargear', targetValue: 'heavy-flamer', meta: { name: 'Heavy Flamer' } },
+            ],
+          },
+          {
+            key: 'crozius-arcanum-assault-cannon',
+            name: '[ONLY FOR CHAPLAIN] Crozius Arcanum & Assault Cannon',
+            snippet: 'You gain a Crozius Arcanum and an Assault Cannon.',
+            modifications: [
+              { targetGroup: 'wargear', targetValue: 'crozius-arcanum', meta: { name: 'Crozius Arcanum' } },
+              { targetGroup: 'wargear', targetValue: 'assault-cannon', meta: { name: 'Assault Cannon' } },
+            ],
+          },
+          {
+            key: 'force-weapon-storm-bolter',
+            name: '[ONLY FOR LIBRARIAN] Force Weapon & Storm Bolter',
+            snippet: 'You gain a Force Weapon and a Storm Bolter.',
+            modifications: [
+              { targetGroup: 'wargear', targetValue: 'force-weapon', meta: { name: 'Force Weapon' } },
+              { targetGroup: 'wargear', targetValue: 'storm-bolter', meta: { name: 'Storm Bolter' } },
+            ],
+          },
+          {
+            key: 'force-weapon-heavy-flamer',
+            name: '[ONLY FOR LIBRARIAN] Force Weapon & Heavy Flamer',
+            snippet: 'You gain a Force Weapon and a Heavy Flamer.',
+            modifications: [
+              { targetGroup: 'wargear', targetValue: 'force-weapon', meta: { name: 'Force Weapon' } },
+              { targetGroup: 'wargear', targetValue: 'heavy-flamer', meta: { name: 'Heavy Flamer' } },
+            ],
+          },
+          {
+            key: 'force-weapon-assault-cannon',
+            name: '[ONLY FOR LIBRARIAN] Force Weapon & Assault Cannon',
+            snippet: 'You gain a Force Weapon and an Assault Cannon.',
+            modifications: [
+              { targetGroup: 'wargear', targetValue: 'force-weapon', meta: { name: 'Force Weapon' } },
+              { targetGroup: 'wargear', targetValue: 'assault-cannon', meta: { name: 'Assault Cannon' } },
+            ],
+          },
+        ]
+      }
+    ],
+  },
+  {
+    name: 'Rubicon Primaris',
+    ...simpleStub(source.voab.key, 43,'Rubicon Primaris','', false),
+    cost: 80,
+    costPerTier: 0,
+    minimumCampaignTier: 3,
+    prerequisites: ['Adeptus Astartes Species'],
+    // Benefits
+    influenceBonus: 2,
+    influencePerTier: 0,
+    storyElementDescription:
+      '<p>Few Space Marines could refuse the prospect of being remade, stronger and faster, more capable of waging war against the enemies of the Imperium. You have undergone the extensive and agonising operation required to be implanted with the three additional organs needed to join your Primaris brethren and now count yourself among those who have crossed the Rubicon Primaris.</p>',
+    ascensionFeatures: [
+      {
+        key: 'built-tough',
+        name: 'Built Tough',
+        snippet: 'You get the Built Tough talent.',
+        modifications: [
+          { targetGroup: 'talents', targetValue: 'voab-built-tough', meta: { name: 'Built Tough' } },
+        ],
+      },
+      {
+        key: 'bolter-discipline',
+        name: 'Bolter Discipline',
+        snippet: 'You gain the Bolter Discipline talent.',
+        modifications: [
+          { targetGroup: 'talents', targetValue: 'voab-bolter-discipline', meta: { name: 'Bolter Discipline' } },
+        ],
+      },
+      {
+        key: 'primaris-keyword',
+        name: 'Primaris Keyword',
+        snippet: 'You gain the Primaris keyword.',
+        modifications: [
+          { targetGroup: 'keywords', targetValue: 'Primaris' },
+        ],
+      },
+      {
+        key: 'primaris-ascensions',
+        name: 'Primaris Ascensions',
+        snippet: 'In the future you may choose from the Primaris Ascensions.',
+      },
+      {
+        key: 'wargear',
+        name: 'Wargear',
+        wargear: [
+          {
+            name: 'A item, Uncommon',
+            selected: '',
+            options: [
+              {
+                filter: true,
+                valueFilter: { useCharacterTier: false, useSettingTier: false, useAscensionTargetTier: true, fixedValue: 3 },
+                rarityFilter: ['Uncommon'],
+                
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
 ]
 
 module.exports = [
