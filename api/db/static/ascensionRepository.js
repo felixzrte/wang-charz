@@ -2027,7 +2027,7 @@ const voab = [
       {
         key: 'primaris-keyword',
         name: 'Primaris Keyword',
-        snippet: 'You gain the Primaris keyword.',
+        snippet: 'You gain the PRIMARIS keyword.',
         modifications: [
           { targetGroup: 'keywords', targetValue: 'Primaris' },
         ],

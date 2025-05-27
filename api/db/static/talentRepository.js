@@ -2718,7 +2718,7 @@ const voab = [
   {
     ...talent(source.voab.key,44,'Adaptive Strategy',20),
     key: stringToKebab('voab adaptive strategy'),
-    snippet: 'When spending Wrath on Narrative Declarations, roll a die. On an Icon, keep your Wrath point.',
+    snippet: 'Wrath spent on Narrative Declarations may not be lost if you roll an Icon.',
     description: 
       '<p>Informed by your Chapter doctrines or the Codex Astartes, you can overcome whatever obstacles emerge on your path to victory. Your battle plans are comprehensive, and what you cannot plan for, you overcome with cunning improvisation.</p>' +
       '<p>When spending a point of Wrath to make a Narrative Declaration, you may roll a die if the GM approves your declaration. If this die rolls an Icon, the point of Wrath is not spent. If the die rolls an Exalted Icon, the results of the Narrative Declaration are more impressive than usual, and the Wrath point is not spent.</p>',
@@ -2731,7 +2731,7 @@ const voab = [
   {
     ...talent(source.voab.key,45,'Armour of Contempt',30),
     key: stringToKebab('voab armour of contempt'),
-    snippet: 'Use Wrath to roll Determination against Mortal Wounds.',
+    snippet: 'Spend Wrath to roll Determination against Mortal Wounds.',
     description: 
       '<p>No fell sorcery or malign xenotechnology is sufficient to overcome your armour, for you are clad in righteous faith as well as ceramite. You may spend a point of Wrath to roll Determination against Mortal Wounds as if a standard source of damage inflicted them.</p>',
     requirementsString: 'Adeptus Astartes Keyword, Willpower Rating 5+',
@@ -2743,7 +2743,7 @@ const voab = [
   {
     ...talent(source.voab.key,45,'Bolter Discipline',20),
     key: stringToKebab('voab bolter discipline'),
-    snippet: 'BOLT weapons gain Rapid Fire(2), or add +Rank to existing Rapid Fire rating.',
+    snippet: 'BOLT weapons gain Rapid Fire (2) or +Rank to Rapid Fire.',
     description: 
       '<p>Your Bolter spits forth a storm of iron that pulverises threats in an unyielding sequence of explosions. When you use a weapon with the BOLT Keyword, it gains the Rapid Fire (2) Trait. If the weapon already has the Rapid Fire Trait, add +Rank to the weapon\'s Rapid Fire rating.</p>',
     requirementsString: 'Adeptus Astartes Keyword',
@@ -2754,249 +2754,24 @@ const voab = [
   {
     ...talent(source.voab.key,46,'Codex Innovator',20),
     key: stringToKebab('voab codex innovator'),
-    snippet: 'When using Help action, grant +Double Rank bonus dice instead of +1.',
+    snippet: '+Rank dice to Leadership and Persuasion for your plans; gain bonus Wrath for planning.',
     description: 
-      '<p>Your mastery of Codex Astartes principles allows you to guide allies with exceptional effectiveness. When you use the Help action to assist an ally, you grant +Double Rank bonus dice instead of the usual +1.</p>',
-    requirementsString: 'Adeptus Astartes Keyword, Leadership 3+',
+      '<p>Since the return of Roboute Guilliman, the Codex Astartes has slowly been recognised as a living document which the greatest tacticians may contribute and iterate upon. Your own studious knowledge of the Codex Astartes and years of service allow you to quickly adapt and evolve strategies on the battlefield in line with its tenets. While it may be decades or centuries before your tactics receive the necessary approval to be disseminated to other Chapters for consideration and adoption, your brethren know your strategic insight, as do all those who witness you in battle.</p>' +
+      '<p>When executing a strategic plan or tactic that you helped create, you add + (Rank) dice to all Leadership (Wil) and Persuasion (Fel) Tests to guide others through the details. In addition, if you have at least one hour to plan for an upcoming encounter or mission, you receive one bonus Wrath point that can only be spent on a Narrative Declaration (Wrath & Glory Core Rulebook, page 164) relevant to your plan. This Wrath point can carry over between sessions, but you may never possess more than one bonus Wrath point from this Talent.</p>',
+    requirementsString: 'Adeptus Astartes Keyword, Intellect 5+, Ultramarines or Ultramarines Successor Chapter',
     requirements: [
       requireKeyword('Adeptus Astartes'),
-      requireSkill('leadership', 3)
+      requireAttribute('intellect', 5),
+      requireKeyword('Ultramarines')
     ],
   },
   {
     ...talent(source.voab.key,46,'Codex Duelist',20),
     key: stringToKebab('voab codex duelist'),
-    snippet: 'In single combat, gain +1 Defence and +Rank to melee attacks against your opponent.',
+    snippet: 'First Rank Wounds inflicted require 2 Icons each to soak.',
     description: 
-      '<p>Your study of dueling techniques makes you a formidable opponent in single combat. When engaged with only one opponent in melee, you gain +1 Defence and +Rank bonus dice to melee attacks against that opponent.</p>',
-    requirementsString: 'Adeptus Astartes Keyword, Weapon Skill 3+',
-    requirements: [
-      requireKeyword('Adeptus Astartes'),
-      requireSkill('weaponSkill', 3)
-    ],
-  },
-  {
-    ...talent(source.voab.key,46,'Echo of Sanguinius',20),
-    key: stringToKebab('voab echo of sanguinius'),
-    snippet: 'After a successful Charge, make an additional melee attack as a Free Action.',
-    description: 
-      '<p>The noble blood of the Great Angel flows through your veins, granting you exceptional speed and ferocity in combat. After successfully completing a Charge, you may make an additional melee attack as a Free Action.</p>',
-    requirementsString: 'Blood Angels Keyword, Agility 4+',
-    requirements: [
-      requireKeyword('Blood Angels'),
-      requireAttribute('agility', 4)
-    ],
-  },
-  {
-    ...talent(source.voab.key,46,'Fear Made Manifest',20),
-    key: stringToKebab('voab fear made manifest'),
-    snippet: 'Enemies within 10m who can see you suffer +1 DN to all tests.',
-    description: 
-      '<p>Your reputation and presence inspire dread in your foes. Enemies within 10 meters who can see you suffer +1 DN to all tests due to fear and intimidation.</p>',
-    requirementsString: 'Night Lords Keyword, Intimidation 3+',
-    requirements: [
-      requireKeyword('Night Lords'),
-      requireSkill('intimidation', 3)
-    ],
-  },
-  {
-    ...talent(source.voab.key,47,'Gene-Wrought Might',20),
-    key: stringToKebab('voab gene-wrought might'),
-    snippet: 'Add +Double Rank ED when using the All-Out Attack combat option.',
-    description: 
-      '<p>Your gene-seed enhanced physiology allows you to strike with tremendous power when focusing all your effort into an attack. When using the All-Out Attack combat option, add +Double Rank ED to the damage.</p>',
-    requirementsString: 'Adeptus Astartes Keyword, Strength 4+',
-    requirements: [
-      requireKeyword('Adeptus Astartes'),
-      requireAttribute('strength', 4)
-    ],
-  },
-  {
-    ...talent(source.voab.key,47,'Chainsaw Warrior',20),
-    key: stringToKebab('voab chainsaw warrior'),
-    snippet: 'Reroll damage dice with CHAIN weapons. When you roll a 6 on attack, target suffers Bleeding.',
-    description: 
-      '<p>You are particularly adept at wielding the iconic chain weapons of the Imperium. When attacking with weapons with the CHAIN Keyword, you may reroll any number of damage dice once. Additionally, when you roll a 6 on the Wrath die for an attack with a chain weapon, your target suffers the Bleeding condition in addition to any other effects.</p>',
-    requirementsString: 'Weapon Skill 3+',
-    requirements: [
-      requireSkill('weaponSkill', 3)
-    ],
-  },
-  {
-    ...talent(source.voab.key,47,'Built Tough',20, ''),
-    key: stringToKebab('voab built tough'),
-    snippet: 'Heavy weapons reduce their Heavy rating by your Rank (to a minimum of 1).',
-    description: 
-      '<p>Your enhanced strength and specialized training allow you to handle heavy weaponry with ease. Reduce the Heavy rating of any weapon you use by your Rank (to a minimum of 1).</p>',
-    requirementsString: 'Adeptus Astartes Keyword, Strength 4+',
-    requirements: [
-      requireKeyword('Adeptus Astartes'),
-      requireAttribute('strength', 4)
-    ],
-  },
-  {
-    ...talent(source.voab.key,47,'Gilead Combat Veteran',20),
-    key: stringToKebab('voab gilead combat veteran'),
-    snippet: 'When using a GILEAD weapon, add +Rank to damage and you may reroll one damage die.',
-    description: 
-      '<p>Your extensive combat experience with Gilead-pattern weapons has made you exceptionally lethal with these specialized tools of war. When using any weapon with the GILEAD keyword, you add +Rank to damage and may reroll one damage die per attack.</p>',
-    requirementsString: 'Adeptus Astartes Keyword, Ballistic Skill 3+',
-    requirements: [
-      requireKeyword('Adeptus Astartes'),
-      requireSkill('ballisticSkill', 3)
-    ],
-  },
-  {
-    ...talent(source.voab.key,47,'Hammer of Wrath',20),
-    key: stringToKebab('voab hammer of wrath'),
-    snippet: 'When you Charge using a Jump Pack, enemies within 2m suffer mortal wounds equal to your Strength.',
-    description: 
-      '<p>You descend from the skies with devastating force, your armored form becoming a weapon in itself. When you successfully Charge using a Jump Pack, all enemies within 2 meters of your landing point suffer mortal wounds equal to your Strength attribute.</p>',
-    requirementsString: 'Adeptus Astartes Keyword, Jump Pack, Toughness 4+',
-    requirements: [
-      requireKeyword('Adeptus Astartes'),
-      requireAttribute('toughness', 4)
-    ],
-  },
-  {
-    ...talent(source.voab.key,47,'Inner Circle Secrets',20),
-    key: stringToKebab('voab inner circle secrets'),
-    snippet: 'You are immune to Fear and Intimidation from CHAOS sources. Add +Rank to Resolve tests and Determination rolls against psychic powers.',
-    description: 
-      '<p>You have been initiated into the secrets of the Inner Circle and fortified against the whispers of the warp. You are immune to Fear and Intimidation effects from sources with the CHAOS keyword. Additionally, you add +Rank to Resolve tests and Determination rolls made to resist or reduce damage from psychic powers.</p>',
-    requirementsString: 'Dark Angels Keyword, Willpower 4+',
-    requirements: [
-      requireKeyword('Dark Angels'),
-      requireAttribute('willpower', 4)
-    ],
-  },
-  {
-    ...talent(source.voab.key,48,'Legacy of the Primarch',30),
-    key: stringToKebab('voab legacy of the primarch'),
-    snippet: 'Choose a Legion trait related to your Chapter\'s Primarch. Gain +Double Rank bonus to associated rolls.',
-    description: 
-      '<p>The genetic legacy of your Primarch flows strongly in your veins, manifesting in heightened abilities that reflect their unique qualities. Choose one trait associated with your Chapter\'s Primarch (such as tactical acumen, fortitude, craftsmanship, etc.). When making rolls directly connected to this trait, gain +Double Rank bonus dice.</p>',
-    requirementsString: 'Adeptus Astartes Keyword, Tier 2+',
-    requirements: [
-      requireKeyword('Adeptus Astartes'),
-      requireTier(2)
-    ],
-  },
-  {
-    ...talent(source.voab.key,48,'Mortal Understanding',15),
-    key: stringToKebab('voab mortal understanding'),
-    snippet: '+Double Rank to social skills when interacting with unaugmented humans. Reduce penalties for intimidating presence.',
-    description: 
-      '<p>Despite your transhuman nature, you possess rare insight into the minds and hearts of ordinary humans. You gain +Double Rank bonus dice to Fellowship-based social skill tests when interacting with unaugmented humans. Additionally, any penalties you would normally suffer to social interactions due to your intimidating transhuman presence are reduced by your Rank.</p>',
-    requirementsString: 'Adeptus Astartes Keyword, Fellowship 3+',
-    requirements: [
-      requireKeyword('Adeptus Astartes'),
-      requireAttribute('fellowship', 3)
-    ],
-  },
-  {
-    ...talent(source.voab.key,48,'Pain Glove Endurant',20),
-    key: stringToKebab('voab pain glove endurant'),
-    snippet: 'You may roll Determination against Agonizing damage and gain +Rank to these rolls.',
-    description: 
-      '<p>Your extensive training with the Imperial Fists\' pain gloves has given you remarkable tolerance for even the most excruciating pain. You may roll Determination against damage with the Agonizing trait, which normally cannot be reduced through Determination. Additionally, you gain +Rank bonus dice to all Determination rolls against Agonizing damage.</p>',
-    requirementsString: 'Imperial Fists Keyword, Toughness 4+',
-    requirements: [
-      requireKeyword('Imperial Fists'),
-      requireAttribute('toughness', 4)
-    ],
-  },
-  {
-    ...talent(source.voab.key,48,'Rapid Assault',25),
-    key: stringToKebab('voab rapid assault'),
-    snippet: 'After a successful Charge, you may immediately make a single Combat Action without spending Glory.',
-    description: 
-      '<p>You excel at pressing the advantage in the first moments of engagement. After successfully completing a Charge, you may immediately take a single Combat Action without spending Glory or any other resource. This can include making an additional attack, using a special ability, or any other valid Combat Action.</p>',
-    requirementsString: 'Adeptus Astartes Keyword, Agility 4+, Weapon Skill 3+',
-    requirements: [
-      requireKeyword('Adeptus Astartes'),
-      requireAttribute('agility', 4),
-      requireSkill('weaponSkill', 3)
-    ],
-  },
-  {
-    ...talent(source.voab.key,48,'Raiding Master',20),
-    key: stringToKebab('voab raiding master'),
-    snippet: '+Rank to Stealth and initiative tests during ambushes. First attack against unaware enemies adds +2 ED.',
-    description: 
-      '<p>You are expert in sudden strikes and ambush tactics, striking from the shadows with lethal precision. You gain +Rank bonus dice to Stealth and Initiative tests during ambushes or surprise attacks. Additionally, your first attack against an unaware enemy adds +2 ED to damage.</p>',
-    requirementsString: 'Raven Guard or Night Lords Keyword, Stealth 3+',
-    requirements: [
-      requireKeyword('Raven Guard,Night Lords'),
-      requireSkill('stealth', 3)
-    ],
-  },
-  {
-    ...talent(source.voab.key,48,'Scion of the Forge',20),
-    key: stringToKebab('voab scion of the forge'),
-    snippet: '+Rank to Tech tests when working on weapons/armor. Items you craft gain +1 to one profile stat.',
-    description: 
-      '<p>The mechanical aptitude of your Primarch runs in your blood, making you exceptionally skilled at crafting and modifying equipment. You gain +Rank bonus dice to Tech tests when working on weapons, armor, or other gear. Additionally, items you craft or substantially modify gain +1 to one profile statistic (damage, ED, AP, etc.) of your choice.</p>',
-    requirementsString: 'Iron Hands or Salamanders Keyword, Tech 3+',
-    requirements: [
-      requireKeyword('Iron Hands,Salamanders'),
-      requireSkill('tech', 3)
-    ],
-  },
-  {
-    ...talent(source.voab.key,48,'Skilled Rider',15),
-    key: stringToKebab('voab skilled rider'),
-    snippet: '+Double Rank to Pilot tests with bikes/speeders. Reduce difficult terrain penalties when mounted.',
-    description: 
-      '<p>Your expertise with assault bikes, land speeders, and similar craft makes you a formidable mounted warrior. You gain +Double Rank bonus dice to Pilot tests when operating bikes and speeders. Additionally, you reduce penalties from difficult terrain by your Rank when mounted on or piloting such vehicles.</p>',
-    requirementsString: 'Adeptus Astartes Keyword, Pilot 3+',
-    requirements: [
-      requireKeyword('Adeptus Astartes'),
-      requireSkill('pilot', 3)
-    ],
-  },
-  {
-    ...talent(source.voab.key,49,'Spirit of the Pack',20),
-    key: stringToKebab('voab spirit of the pack'),
-    snippet: 'Grant +Rank bonus dice to up to Rank allies within 10m for Resolve and Fear Tests.',
-    description: 
-      '<p>Your presence inspires courage in those around you, lending them the strength to face down even the most terrifying foes. As a Simple Action, you may grant +Rank bonus dice to up to Rank allies within 10 meters for Resolve and Fear Tests until the start of your next turn.</p>',
-    requirementsString: 'Space Wolves Keyword, Leadership 3+',
-    requirements: [
-      requireKeyword('Space Wolves'),
-      requireSkill('leadership', 3)
-    ],
-  },
-  {
-    ...talent(source.voab.key,49,'Strength from Steel',20),
-    key: stringToKebab('voab strength from steel'),
-    snippet: 'When equipping new cybernetic implants, gain +Rank to related attribute for 24 hours.',
-    description: 
-      '<p>Your physiology has been conditioned to rapidly adapt to bionic enhancements, drawing extraordinary performance from new augmetics. When you equip a new cybernetic implant, you gain +Rank to the related attribute or ability for 24 hours as your body surges with renewed power.</p>',
-    requirementsString: 'Iron Hands Keyword, Toughness 4+',
-    requirements: [
-      requireKeyword('Iron Hands'),
-      requireAttribute('toughness', 4)
-    ],
-  },
-  {
-    ...talent(source.voab.key,49,'Transhuman Physiology',25),
-    key: stringToKebab('voab transhuman physiology'),
-    snippet: 'When targeted by an attack with ED 4 or less, increase DN of the attack by +Rank.',
-    description: 
-      '<p>Your enhanced Astartes physiology renders you nearly impervious to weapons that would be lethal to ordinary humans. When targeted by an attack with ED 4 or less, increase the DN of the attack by +Rank as your reinforced organs and bone structure shrug off what would normally be fatal blows.</p>',
-    requirementsString: 'Adeptus Astartes Keyword, Toughness 5+',
-    requirements: [
-      requireKeyword('Adeptus Astartes'),
-      requireAttribute('toughness', 5)
-    ],
-  },
-  {
-    ...talent(source.voab.key,49,'Whirlwind of Rage',20),
-    key: stringToKebab('voab whirlwind of rage'),
-    snippet: 'When you roll a 6 on your Wrath die in melee, make an additional attack. Can trigger once per turn.',
-    description: 
-      '<p>Your fury in combat manifests as a storm of blows, each successful strike fueling the next. When you roll a 6 on your Wrath die when making a melee attack, you may immediately make an additional attack with the same weapon. This effect can only trigger once per turn.</p>',
+      '<p>You are a practitioner of one of the many duelling schools derived from the Codex Astartes teachings and the martial traditions of your Chapter. Precise movements ensure your blade arrives with maximum force and no time to dodge or brace against its killing edge.</p>' + 
+      '<p>When a Threat attempts to roll Determination against damage you inflict with a melee weapon, the first (Rank) Wounds inflicted require 2 Icons each on the Determination Test to eliminate, although the Threat still only suffers 1 Shock for each Wound reduced.</p>',
     requirementsString: 'Adeptus Astartes Keyword, Weapon Skill 4+',
     requirements: [
       requireKeyword('Adeptus Astartes'),
@@ -3004,28 +2779,261 @@ const voab = [
     ],
   },
   {
-    ...talent(source.voab.key,49,'Wise Orator',20),
-    key: stringToKebab('voab wise orator'),
-    snippet: '+Double Rank to Leadership and Persuasion tests when addressing groups. Inspire troops after successful oratory.',
+    ...talent(source.voab.key,46,'Echo of Sanguinius',10),
+    key: stringToKebab('voab echo of sanguinius'),
+    snippet: 'After Respite, ask GM a question about your mission.',
     description: 
-      '<p>You have mastered the rhetorical techniques perfected by your Chapter over millennia, able to inspire and motivate even the most downtrodden forces. You gain +Double Rank bonus dice to Leadership and Persuasion tests when addressing groups. After successful oratory, affected troops gain +1 to Resolve tests for the remainder of the scene.</p>',
-    requirementsString: 'Adeptus Astartes Keyword, Fellowship 3+, Leadership 3+',
+      '<p>The violent and horrific death of the Blood Angels’ Primarch at the hands of Warmaster Horus haunts all of Sanguinius’ sons to this day. Those most afflicted eventually succumb to the Black Rage, haunted by the psychic echoes of that fateful battle. Still, there are more benign manifestations — including the one to which you have become a witness.</p>' + 
+      '<p>A fragment of the visionary spirit of your Primarch lives within you, granting you knowledge of the past and future. You may declare you have had a vision after a Respite (Wrath & Glory Core Rulebook, page 196). If you do, ask the GM one question about events related to your mission. The GM must answer truthfully, although they do not need to tell the whole truth and may be cryptic in their response. However, after your vision, the closeness to Sanguinius’ spirit haunts you. If you have the PRIMARIS Keyword, you are affected by the Blood Angels gene-seed flaw (Wrath & Glory Core Rulebook, pages 71-73) despite your refined origin. Otherwise, increase the DN of the Willpower Test to avoid becoming Frenzied to 5.</p>',
+    requirementsString: 'Adeptus Astartes Keyword, Blood Angels Keyword',
     requirements: [
       requireKeyword('Adeptus Astartes'),
-      requireAttribute('fellowship', 3),
-      requireSkill('leadership', 3)
+      requireKeyword('Blood Angels'),
     ],
   },
   {
-    ...talent(source.voab.key,49,'Wraith-Slipping',25),
+    ...talent(source.voab.key,46,'Fear Made Manifest',20),
+    key: stringToKebab('voab fear made manifest'),
+    snippet: 'Enemies within 10m who can see you suffer +1 DN to all tests.',
+    description: 
+      '<p>When unleashing your wrath in battle, the fury of an Astartes warrior is written across your features. You may make an Intimidation (Wil) Test as a Reflexive Action in combat upon encountering any new foes, including at the start of a battle. Apply the results of the Test to each enemy individually (so a Test that rolls four Icons could intimidate a Cultist requiring DN 3, but not their Traitor Astartes master with a DN of 7). You can only attempt to intimidate a given character in this manner once per encounter.</p>',
+    requirementsString: 'Adeptus Astartes Keyword, Fear Talent',
+    requirements: [
+      requireKeyword('Night Lords'),
+    ],
+  },
+  {
+    ...talent(source.voab.key,47,'Gene-Wrought Might',20),
+    key: stringToKebab('voab gene-wrought might'),
+    snippet: 'Add +Double Rank ED when using the All-Out Attack combat option.',
+    description: 
+      '<p>The power of your modified physiology enables you to perform incredible feats of raw strength, and failure in such endeavours is a stranger to you. You may add an automatic Icon to your results when making a Test involving physical might, such as an Athletics (S) Test to lift a chunk of debris pinning a wounded ally. Additionally, any such Tests take half as long as usual.</p>',
+    requirementsString: 'Adeptus Astartes Keyword, Strength 6+',
+    requirements: [
+      requireKeyword('Adeptus Astartes'),
+      requireAttribute('strength', 6)
+    ],
+  },
+  {
+    ...talent(source.voab.key,47,'Chainsaw Warrior',10),
+    key: stringToKebab('voab chainsaw warrior'),
+    snippet: 'Reroll damage dice with CHAIN weapons. When you roll a 6 on attack, target suffers Bleeding.',
+    description: 
+      '<p>Whatever the spinning teeth of your Chainblade doesn’t catch on the first rotation is shredded on the next pass. When you use a weapon with the CHAIN Keyword, you may re-roll any ED dice you choose, but must accept the second result.</p>',
+    requirementsString: 'None',
+    requirements: [
+    ],
+  },
+  {
+    ...talent(source.voab.key,47,'Built Tough',10),
+    key: stringToKebab('voab built tough'),
+    snippet: 'Heavy weapons reduce their Heavy rating by your Rank (to a minimum of 1).',
+    description: 
+      '<p>You are aggressively self-reliant, substituting your culture’s folk remedies for formal medical training. You can use Survival (Wil) instead of Medicae (Int) to remove your own Wounds, Shock, or Conditions (Wrath & Glory, page 124). You do not suffer the usual DN penalties for using this ability on yourself.</p>',
+    requirementsString: 'Survival Rating 2+',
+    requirements: [
+      requireSkill('survival', 2)
+    ],
+  },
+  {
+    ...talent(source.voab.key,47,'Gilead Combat Veteran',20),
+    key: stringToKebab('voab gilead combat veteran'),
+    snippet: 'When using a GILEAD weapon, add +Rank to damage and you may reroll one damage die.',
+    description: 
+      '<p> You have fought across the length and breadth of the Gilead System, striking the fear of the Emperor into foes in every corner of the system. Once per encounter, when making a Narrative Declaration (Wrath & Glory Core Rulebook, p164), you do not need the GM’s permission to possess routine clearance codes, briefing information, or facts about enemy disposition and numbers. This does not allow you to influence what is physically present in a scene, only to have the ability to access otherwise hidden information by virtue of your extensive experience. </p>',
+    requirementsString: 'Adeptus Astartes Keyword, Ballistic Skill 3+',
+    requirements: [
+      requireKeyword('Adeptus Astartes'),
+    ],
+  },
+  {
+    ...talent(source.voab.key,47,'Hammer of Wrath',20),
+    key: stringToKebab('voab hammer of wrath'),
+    snippet: 'When you Charge using a Jump Pack, enemies within 2m suffer mortal wounds equal to your Strength.',
+    description: 
+      '<p>The wargear of the Assault Companies is as familiar to you as your battle-brothers themselves, and you have mastered their use on the battlefield. When equipped with a Jump Pack (Wrath & Glory Core Rulebook, page 237), you may spend one Wrath to make any attack you make as part of a flying Charge deal Mortal Wounds for damage. </p>',
+    requirementsString: 'Adeptus Astartes Keyword, Pilot Rating 4+',
+    requirements: [
+      requireKeyword('Adeptus Astartes'),
+      requireSkill('pilot', 4)
+    ],
+  },
+  {
+    ...talent(source.voab.key,47,'Inner Circle Secrets',20),
+    key: stringToKebab('voab inner circle secrets'),
+    snippet: 'You are immune to Fear and Intimidation from CHAOS sources. Add +Rank to Resolve tests and Determination rolls against psychic powers.',
+    description: 
+      '<p>The Dark Angels and their Successors sometimes cryptically refer to themselves as the “Unforgiven,” and even the lay brethren of these Chapters do not fully understand why. It is a secret wreathed in myth and metaphor, obscured by Chapter mysteries to which only a few are privy. Those who learn the truth, or are sufficiently trusted by their superiors, are inducted into the Inner Circle and told the reality of the Legion’s ancient split and fall from grace, giving them a unique perspective on fallibility and failure.</p>' +
+      '<p>As one entrusted with these secrets — perhaps by Interrogator-Chaplain Caphziel aboard the Varonius Flotilla — or who discovered the terrible truth in the field, you are prepared to face the worst forms of betrayal. Ever vigilant, you do not need to pay a point of Glory to be considered aware of an ambush (Wrath & Glory Core Rulebook, page 177), and reduce by 2 the DN of Cunning (Fel) and Scholar (Int) Tests to unearth or learn of betrayal and those who would engage in it.</p>',
+    requirementsString: 'Adeptus Astartes Keyword, Dark Angels Keyword, Willpower 5+',
+    requirements: [
+      requireKeyword('Adeptus Astartes'),
+      requireKeyword('Dark Angels'),
+      requireAttribute('willpower', 5)
+    ],
+  },
+  {
+    ...talent(source.voab.key,48,'Legacy of the Primarch',20),
+    key: stringToKebab('voab legacy of the primarch'),
+    snippet: 'Choose a Legion trait related to your Chapter\'s Primarch. Gain +Double Rank bonus to associated rolls.',
+    description: 
+      '<p>You are a true inheritor of the legacy of your progenitor, bearing the fruits of their genetic, martial, and spiritual heritage in full. For some Astartes, this means countless hours of study of the Codex Astartes to master Guilliman’s teachings. In contrast, for others, it means embracing the spirit of the wolf within or replacing the frailty of flesh with the surety of iron. What it means for you depends on your Chapter and the First Founding Legion from which you descend, but it enables you to perform incredible feats, the likes of which only a mighty champion of your gene line could manage.</p>' +
+      '<p>This Talent has a variable effect depending on your [CHAPTER] Keyword. If you are playing a Chapter with an unknown succession (Wrath & Glory Core Rulebook, page 71), use the Keyword from which you drew your Chapter Traits at character creation.</p>',
+    requirementsString: 'Adeptus Astartes Keyword, [Chapter] Keyword',
+    requirements: [
+      requireKeyword('Adeptus Astartes'),
+    ],
+  },
+  {
+    ...talent(source.voab.key,48,'Mortal Understanding',10),
+    key: stringToKebab('voab mortal understanding'),
+    snippet: '+Double Rank to social skills when interacting with unaugmented humans. Reduce penalties for intimidating presence.',
+    description: 
+      '<p>You have lived among the unaugmented Humans of Nocturne, perhaps alongside your distant kin. As such, you find it easier to relate to the ordinary citizens of the Imperium than most Astartes. Therefore, you reduce the DN of Fellowship-based Tests by 2 when interacting with Humans. In addition, once you have made a successful Fellowship-based Test to influence or calm someone frightened by your Infernal Inheritance Chapter Trait (Wrath & Glory Core Rulebook, page 74), you may waive future penalties when interacting with that individual.</p>',
+    requirementsString: 'Adeptus Astartes Keyword, Salamanders Keyword, Fellowship Rating 2+',
+    requirements: [
+      requireKeyword('Adeptus Astartes'),
+      requireKeyword('Salamanders'),
+      requireAttribute('fellowship', 2)
+    ],
+  },
+  {
+    ...talent(source.voab.key,48,'Pain Glove Endurant',30),
+    key: stringToKebab('voab pain glove endurant'),
+    snippet: 'You may roll Determination against Agonizing damage and gain +Rank to these rolls.',
+    description: 
+      '<p>Having regularly engaged in the tradition of the Pain Glove familiar to the scions of Dorn, you have pitted your will against relentless pain. You typically prove the victor in such battles and have learned to disregard fear and suffering as unworthy distractions. As a result, you ignore penalties to Tests caused by pain. In addition, you are immune to Fear.  </p>',
+    requirementsString: 'Adeptus Astartes Keyword, Imperial Fists Keyword, Willpower 5+',
+    requirements: [
+      requireKeyword('Adeptus Astartes'),
+      requireKeyword('Imperial Fists'),
+      requireAttribute('willpower', 5)
+    ],
+  },
+  {
+    ...talent(source.voab.key,48,'Rapid Assault',20),
+    key: stringToKebab('voab rapid assault'),
+    snippet: 'After a successful Charge, you may immediately make a single Combat Action without spending Glory.',
+    description: 
+      '<p> You can maintain a steady volley of fire while swiftly advancing. You can fire ranged weapons with the Assault Trait (Wrath & Glory Core Rulebook, page 208) as part of a Sprint (Wrath & Glory Core Rulebook, page 180) without an increased DN.</p>',
+    requirementsString: 'Adeptus Astartes Keyword, Athletics Rating 2+, Ballistic Skill 3+',
+    requirements: [
+      requireKeyword('Adeptus Astartes'),
+      requireAttribute('agility', 4),
+      requireSkill('ballistic', 3)
+    ],
+  },
+  {
+    ...talent(source.voab.key,48,'Raiding Master',10),
+    key: stringToKebab('voab raiding master'),
+    snippet: '+Rank to Stealth and initiative tests during ambushes. First attack against unaware enemies adds +2 ED.',
+    description: 
+      '<p>Not only are the White Scars masters of raiding warfare, but they also have an ancient hatred of raiders who dare strike against the Imperium. Conflicts against Drukhari and Traitor Astartes alike have long nourished this hatred. As few others have done, you have mastered raiding warfare by careful study and hard-won experience. You gain +(Rank) dice to all Tests to plan and execute a raid or ambush. You also gain the same bonus to Tests to detect or prevent enemies from raiding or ambushing you and your allies.</p>',
+    requirementsString: 'Adeptus Astartes Keyword, White Scars Keyword, Initiative Rating 5+',
+    requirements: [
+      requireKeyword('Adeptus Astartes'),
+      requireKeyword('White Scars'),
+      requireAttribute('initiative', 5)
+    ],
+  },
+  {
+    ...talent(source.voab.key,48,'Scion of the Forge',20),
+    key: stringToKebab('voab scion of the forge'),
+    snippet: '+Rank to Tech tests when working on weapons/armor. Items you craft gain +1 to one profile stat.',
+    description: 
+      '<p>Through ritual study, you have mastered the machine spirits, not just of your wargear but of various tech patterns and obscure devices. What you do not know you learn swiftly, applying your vast knowledge with practised pragmatism and efficiency. When making a Tech Test to analyse or repair a piece of advanced Imperial machinery or wargear, add +Rank dice.</p>',
+    requirementsString: 'Iron Hands or Salamanders Keyword, Tech 3+',
+    requirements: [
+      requireKeyword('Adeptus Astartes'),
+      requireSkill('tech', 4)
+    ],
+  },
+  {
+    ...talent(source.voab.key,48,'Skilled Rider',20),
+    key: stringToKebab('voab skilled rider'),
+    snippet: '+Double Rank to Pilot tests with bikes/speeders. Reduce difficult terrain penalties when mounted.',
+    description: 
+      '<p>Atop one of your Chapter’s iron steeds, you are capable of feats of daring speed that can see you ride through the teeth of an enemy barrage unharmed. When riding a combat bike, Land Speeder, or similarly swift Astartes vehicle, enemies who make ranged attacks against you or your vehicle increase their DN by +2. This penalty only applies if you moved at least 10m in your previous turn.  </p>',
+    requirementsString: 'Adeptus Astartes Keyword, Pilot Rating 4+',
+    requirements: [
+      requireKeyword('Adeptus Astartes'),
+      requireSkill('pilot', 4)
+    ],
+  },
+  {
+    ...talent(source.voab.key,49,'Spirit of the Pack',10),
+    key: stringToKebab('voab spirit of the pack'),
+    snippet: 'Grant +Rank bonus dice to up to Rank allies within 10m for Resolve and Fear Tests.',
+    description: 
+      '<p> You count not only the warriors of your Chapter as battle-brothers but the beasts of Fenris and many other worlds. Such is your intuitive understanding of feral beasts that you can almost communicate with them. Therefore, when making a Test to interact with or influence natural wildlife (including xeno-fauna), you may add +(double Rank) dice. In addition, such creatures are reluctant to attack you, treating you as if you caused Fear with a DN equal to (Rank +2).</p>',
+    requirementsString: 'Space Wolves Keyword, Survival Rating 3+',
+    requirements: [
+      requireKeyword('Adeptus Astartes'),
+      requireKeyword('Space Wolves'),
+      requireAttribute('survival', 3)
+    ],
+  },
+  {
+    ...talent(source.voab.key,49,'Strength from Steel',20),
+    key: stringToKebab('voab strength from steel'),
+    snippet: 'When equipping new cybernetic implants, gain +Rank to related attribute for 24 hours.',
+    description: 
+      '<p>You are aware of the frailties and weaknesses of flesh and have learned to bolster yourself by relying instead on your blessed augmetics. Once per session, you may ignore a source of damage that would inflict Wounds equal to or less than the number of augmetics you have installed.</p>',
+    requirementsString: 'Adeptus Astartes Keyword, Iron Hands Keyword, Toughness Rating 5+',
+    requirements: [
+      requireKeyword('Adeptus Astartes'),
+      requireKeyword('Iron Hands'),
+      requireAttribute('toughness', 5)
+    ],
+  },
+  {
+    ...talent(source.voab.key,49,'Transhuman Physiology',40),
+    key: stringToKebab('voab transhuman physiology'),
+    snippet: 'When targeted by an attack with ED 4 or less, increase DN of the attack by +Rank.',
+    description: 
+      '<p>Your constitution is such that no blade, bolt, or other weapon can keep you down for long. When an attack deals less than (Rank) Wounds to you, you may immediately choose to convert them to Shock as if you had automatically received (Rank) Icons while rolling Determination. In addition, when converting Wounds to Shock through this method or with standard Determination rolls, you receive one less Shock per instance of conversion, to a minimum of 1.</p>',
+    requirementsString: 'Adeptus Astartes Keyword, Toughness Rating 6+',
+    requirements: [
+      requireKeyword('Adeptus Astartes'),
+      requireAttribute('toughness', 6)
+    ],
+  },
+  {
+    ...talent(source.voab.key,49,'Whirlwind of Rage',20),
+    key: stringToKebab('voab whirlwind of rage'),
+    snippet: 'When you roll a 6 on your Wrath die in melee, make an additional attack. Can trigger once per turn.',
+    description: 
+      '<p>Raw gene-enhanced muscle mass aids your brutal charges, driven by a hatred of the unclean. When attacking part of a Charge, you may shift up to (Rank) Exalted Icons for +2 ED each instead of the standard +1 ED.</p>',
+    requirementsString: 'Adeptus Astartes Keyword, Athletics Rating 4+',
+    requirements: [
+      requireKeyword('Adeptus Astartes'),
+      requireAttribute('athletics', 4)
+    ],
+  },
+  {
+    ...talent(source.voab.key,49,'Wise Orator',30),
+    key: stringToKebab('voab wise orator'),
+    snippet: '+Double Rank to Leadership and Persuasion tests when addressing groups. Inspire troops after successful oratory.',
+    description: 
+      '<p>You carry an air of authority and wisdom any faithful servant of the Emperor can recognise. Those who stop and listen to you are invariably impressed by insight, decreasing the DN to persuade or influence loyal Imperial citizens and soldiers when making a Leadership Test. If using the optional NPC Attitudes rules (Wrath & Glory Core Rulebook, page 168), you can treat all Neutral NPCs as having a Helpful Attitude.</p>' +
+      '<p>In addition, your sermons carry particular weight with your Astartes brethren. When reciting a Litany of Battle (page 57), any affected targets other than yourself retain the benefits of the Litany for an additional turn after you cease to sustain the Litany. This effect stacks with any similar products from Potency.</p>',
+    requirementsString: 'Adeptus Astartes Keyword, Leadership Rating 4+',
+    requirements: [
+      requireKeyword('Adeptus Astartes'),
+      requireAttribute('leadership', 4)
+    ],
+  },
+  {
+    ...talent(source.voab.key,49,'Wraith-Slipping',10),
     key: stringToKebab('voab wraith-slipping'),
     snippet: 'Once per combat, become hidden to any observer not within 5m. Gain +Rank to your next attack if undetected.',
     description: 
-      '<p>Through warp-touched techniques and specialized training, you can momentarily fade from perception. Once per combat, as a Simple Action, you may become hidden to any observer not within 5 meters of you. You gain +Rank bonus dice to your next attack if you remain undetected before striking.</p>',
-    requirementsString: 'Raven Guard Keyword, Stealth 4+',
+      '<p> In the traditions of the Raven Guard, many esoteric physical and mental exercises prepare battlebrothers for stealth operations. They are collectively known as “wraith-slipping,” and you are versed in every single one. As a result, you may ignore penalties to Stealth (A) Tests from your size, wargear, or lack of camouflage.</p>',
+    requirementsString: 'Adeptus Astartes Keyword, Raven Guard Keyword, Agility Rating 5+',
     requirements: [
+      requireKeyword('Adeptus Astartes'),
       requireKeyword('Raven Guard'),
-      requireSkill('stealth', 4)
+      requireAttribute('agility', 4)
     ],
   },
   {
@@ -3033,11 +3041,11 @@ const voab = [
     key: stringToKebab('voab uncompromising fire'),
     snippet: 'When using Storm of Fire combat option, negate the -2 ED penalty and add +Rank bonus dice to the attack.',
     description: 
-      '<p>Your mastery of focused fire allows you to maintain accuracy even when pushing your weapon to its limits. When using the Storm of Fire combat option, you negate the normal -2 ED penalty and add +Rank bonus dice to the attack roll.</p>',
-    requirementsString: 'Adeptus Astartes Keyword, Ballistic Skill 4+',
+      '<p>Combat is so routine to you that it has receded to a reflexive level, freeing your conscious mind to perform other tasks.</p>',
+    requirementsString: 'Adeptus Astartes Keyword, Initiative Rating 5+',
     requirements: [
       requireKeyword('Adeptus Astartes'),
-      requireSkill('ballisticSkill', 4)
+      requireAttribute('initiative', 4)
     ],
   }
 ]
