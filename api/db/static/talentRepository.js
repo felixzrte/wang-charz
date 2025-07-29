@@ -3103,7 +3103,71 @@ const voab = [
       requireKeyword('Adeptus Astartes'),
       requireAttribute('agility', 5)
     ],
-  }
+  },
+  {
+    ...talent(source.voab.key, 58, 'Litany of Hate', 0),
+    key: stringToKebab('voab litany of hate'),
+    snippet: 'Spend 1 Faith: ADEPTUS ASTARTES within 20m may re-roll (Rank) dice showing 1-3 on melee attacks.',
+    description:
+      '<p>Invoking the psycho-conditioning of your brethren, you prime the Space Marines around you to fight with zeal and fervour until their foes are nought but ruin and corpses.</p>' +
+      '<p>Spend 1 Faith to affect targets with the ADEPTUS ASTARTES Keyword within 20m range of the Chaplain. Those affected may re-roll (Chaplain’s Rank) dice with a result of 1, 2, or 3 whenever making a melee attack.</p>' +
+      '<p>By spending a further point of Faith, to further enhance the effect, affected targets may re-roll an additional die on melee attacks, and the effect lasts for an additional round so long as the Chaplain remains in sight and can be heard.</p>',
+    requirementsString: 'Adeptus Astartes',
+    requirements: [ requireKeyword('Adeptus Astartes') ],
+  },
+  {
+    ...talent(source.voab.key, 58, 'Litany of Faith', 10),
+    key: stringToKebab('voab litany of faith'),
+    snippet: 'Targets within 20m may roll Determination for Mortal Wounds as if typical damage.',
+    description:
+      '<p>You inspire those around you to stand fast, as enduring in flesh as they are in faith. Affected targets within 20m may roll Determination for Mortal Wounds as if they were typical damage.</p>' +
+      '<p>By spending a further point of Faith, the effect of this Litany is enhanced and affected targets may reroll a single Determination die against Mortal Wounds.</p>',
+    requirementsString: 'Adeptus Astartes',
+    requirements: [ requireKeyword('Adeptus Astartes') ],
+  },
+  {
+    ...talent(source.voab.key, 58, 'Catechism of Fire', 20),
+    key: stringToKebab('voab catechism of fire'),
+    snippet: 'Targets within 20m gain +2 ED to ranged damage vs closest threat. +3 ED with extra Faith.',
+    description:
+      '<p>Exhorting your comrades to expend every bolt and ounce of fuel they have in the utter destruction of oncoming foes, you direct their armaments towards nearby enemies so that you might destroy a threat before it can close to melee.</p>' +
+      '<p>When you begin reciting this Litany, you designate the threat closest to you. Affected targets within 20m gain an additional +2 ED for damage for each hit applied to the designated threat when making ranged attacks.</p>' +
+      '<p>By spending an additional point of Faith, the affected targets instead gain +3ED to damage for each hit applied to the threat.</p>',
+    requirementsString: 'Adeptus Astartes, Leadership 4+',
+    requirements: [ requireKeyword('Adeptus Astartes'), requireAttribute('leadership', 4) ],
+  },
+  {
+    ...talent(source.voab.key, 58, 'Exhortation of Rage', 15),
+    key: stringToKebab('voab exhortation of rage'),
+    snippet: 'Targets within 20m add +1 ED to melee damage. Extra Faith: +1 die to melee attacks, lasts extra round.',
+    description:
+      '<p>Denouncing the unrighteous, you call upon your allies to face down the foes of Mankind with steel in their hearts and their hands. Affected targets within 20m add +1 ED to damage on successful melee attacks.</p>' +
+      '<p>By spending a further point of Faith, affected targets gain +1 die to melee attack Tests, and the effects of the Litany lasts for an additional round, even if the Chaplain moves out of range, or can no longer be heard.</p>',
+    requirementsString: 'Adeptus Astartes, Frenzy Talent',
+    requirements: [ requireKeyword('Adeptus Astartes'), requireTalent('Frenzy') ],
+  },
+  {
+    ...talent(source.voab.key, 58, 'Sword of the Emperor', 20),
+    key: stringToKebab('voab sword of the emperor'),
+    snippet: 'Single Astartes within 20m: next melee hit inflicts Mortal Wounds equal to your Rank.',
+    description:
+      '<p>Whether reciting words only you can hear or announcing your faith in a deafening bellow, your words ring in the ears of an ally, upon them your blessing bestows them the vigour of the Emperor and His fiery wrath.</p>' +
+      '<p>A single affected target with the Astartes Keyword, within 20m, inflicts with their next melee attack, if it hits, a number of Mortal Wounds equal to your Rank.</p>' +
+      '<p>By spending a further point of Faith the effect of this Litany is sustained for a further round.</p>',
+    requirementsString: 'Adeptus Astartes, Orthopraxy Talent',
+    requirements: [ requireKeyword('Adeptus Astartes'), requireTalent('Orthopraxy') ],
+  },
+  {
+    ...talent(source.voab.key, 58, 'Recitation of Focus', 15),
+    key: stringToKebab('voab recitation of focus'),
+    snippet: 'Targets within 20m extend weapon ranges by short range, reduce cover/vision penalties by 1.',
+    description:
+      '<p>You chant a stern and steady prayer that guides your brethren to focus and clarity, enabling their shots to hit even the most distant and mysterious foes through the chaos of the battlefield.</p>' +
+      '<p>Affected targets within 20m range extend all the ranges of their ranged weapons by their short range. Affected targets reduce the bonus due to cover conferred to a threat by 1, and reduce Vision Penalties by 1.</p>' +
+      '<p>By spending an extra point of Faith, affected targets may reroll a number of attack dice equal to your Rank, including the Wrath die.</p>',
+    requirementsString: 'Adeptus Astartes, Ballistic Skill 6+',
+    requirements: [ requireKeyword('Adeptus Astartes'), requireSkill('ballisticSkill', 6) ],
+  },
 ]
 
 module.exports = [
