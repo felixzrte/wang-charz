@@ -3338,7 +3338,6 @@ const tnh = [
 ];
 
 const voab = [
-  // SPACE MARINE SCOUT
   {
     ...archetype(source.voab.key, 26, 'Adeptus Astartes', 'Space Marine Scout', 2, 'Adeptus Astartes'),
     ...costz(170, [
@@ -3355,6 +3354,7 @@ const voab = [
       reqSkill(SKILLS.WEAPON_SKILL, 3),
     ]),
     keywords: 'Imperium,Adeptus Astartes,[Chapter]',
+    hint: 'A stealthy warrior adept at reconnaissance and infiltration, striking from the shadows before the enemy knows they are there.',
     archetypeFeatures: [
       {
         name: 'Use the Terrain',
@@ -3381,8 +3381,6 @@ const voab = [
     ],
     influence: 1,
   },
-
-  // TACTICAL SPACE MARINE
   {
     ...archetype(source.voab.key, 27, 'Adeptus Astartes', 'Tactical Space Marine', 3, 'Adeptus Astartes'),
     ...costz(277, [
@@ -3402,6 +3400,7 @@ const voab = [
       reqSkill(SKILLS.WEAPON_SKILL, 4),
     ]),
     keywords: 'Imperium,Adeptus Astartes,[Chapter]',
+    hint: 'A versatile and battle-hardened warrior, trained to adapt to any battlefield and execute the Emperor’s will.',
     archetypeFeatures: [
       {
         name: 'Tactical Versatility',
@@ -3418,8 +3417,6 @@ const voab = [
     ],
     influence: 2,
   },
-
-  // 1ST COMPANY VETERAN
   {
     ...archetype(source.voab.key, 28, 'Adeptus Astartes', '1st Company Veteran', 4, 'Adeptus Astartes'),
     ...costz(380, [
@@ -3439,6 +3436,7 @@ const voab = [
       reqSkill(SKILLS.WEAPON_SKILL, 5),
     ]),
     keywords: 'Imperium,Adeptus Astartes,[Chapter]',
+    hint: 'A grizzled veteran of countless battles, master of war and survivor of the deadliest campaigns.',
     archetypeFeatures: [
       {
         name: 'Veteran of the Endless War',
@@ -3465,8 +3463,6 @@ const voab = [
     ],
     influence: 4,
   },
-
-  // ASTARTES APOTHECARY
   {
     ...archetype(source.voab.key, 29, 'Adeptus Astartes', 'Astartes Apothecary', 4, 'Adeptus Astartes'),
     ...costz(357, [
@@ -3487,6 +3483,7 @@ const voab = [
       reqSkill(SKILLS.WEAPON_SKILL, 5),
     ]),
     keywords: 'Imperium,Adeptus Astartes,[Chapter]',
+    hint: 'A skilled battlefield medic, guardian of the gene-seed and savior of fallen battle-brothers.',
     archetypeFeatures: [
       {
         name: 'Prime Helix',
@@ -3504,8 +3501,6 @@ const voab = [
     ],
     influence: 2,
   },
-
-  // ASTARTES CHAPLAIN
   {
     ...archetype(source.voab.key, 31, 'Adeptus Astartes', 'Astartes Chaplain', 4, 'Adeptus Astartes'),
     ...costz(392, [
@@ -3527,6 +3522,7 @@ const voab = [
       reqSkill(SKILLS.WEAPON_SKILL, 5),
     ]),
     keywords: 'Imperium,Adeptus Astartes,[Chapter]',
+    hint: 'A spiritual leader and fierce warrior, inspiring Space Marines to acts of faith and heroism.',
     archetypeFeatures: [
       {
         name: 'Chapter Cult',
@@ -3547,8 +3543,6 @@ const voab = [
     ],
     influence: 2,
   },
-
-  // PRIMARIS ELIMINATOR
   {
     ...archetype(source.voab.key, 30, 'Adeptus Astartes', 'Primaris Eliminator', 4, 'Primaris Astartes'),
     ...costz(276, [
@@ -3565,6 +3559,7 @@ const voab = [
       reqSkill(SKILLS.WEAPON_SKILL, 4),
     ]),
     keywords: 'Imperium,Adeptus Astartes,Primaris,[Chapter]',
+    hint: 'A master marksman and silent killer, eliminating high-value targets from afar with deadly precision.',
     archetypeFeatures: [
       {
         name: 'Emperor’s Judgement',
@@ -3581,8 +3576,6 @@ const voab = [
     ],
     influence: 1,
   },
-
-  // PRIMARIS INCURSOR
   {
     ...archetype(source.voab.key, 31, 'Adeptus Astartes', 'Primaris Incursor', 4, 'Primaris Astartes'),
     ...costz(273, [
@@ -3601,6 +3594,7 @@ const voab = [
       reqSkill(SKILLS.WEAPON_SKILL, 4),
     ]),
     keywords: 'Imperium,Adeptus Astartes,Primaris,[Chapter]',
+    hint: 'A forward scout and saboteur, skilled in infiltration, demolition, and disrupting enemy lines.',
     archetypeFeatures: [
       {
         name: 'Explosive Fury',
@@ -3621,8 +3615,6 @@ const voab = [
     ],
     influence: 1,
   },
-
-  // PRIMARIS INTERCESSOR
   {
     ...archetype(source.voab.key, 32, 'Adeptus Astartes', 'Primaris Intercessor', 4, 'Primaris Astartes'),
     ...costz(357, [
@@ -3643,6 +3635,7 @@ const voab = [
       reqSkill(SKILLS.WEAPON_SKILL, 5),
     ]),
     keywords: 'Imperium,Adeptus Astartes,Primaris,[Chapter]',
+    hint: 'A stalwart line trooper, bringing the Emperor’s wrath to the enemy with disciplined firepower.',
     archetypeFeatures: [
       {
         name: 'Intercessor Focus',
@@ -3658,8 +3651,6 @@ const voab = [
     ],
     influence: 2,
   },
-
-  // ASTARTES LIBRARIAN
   {
     ...archetype(source.voab.key, 33, 'Adeptus Astartes', 'Astartes Librarian', 4, 'Adeptus Astartes'),
     ...costz(359, [
@@ -3679,6 +3670,7 @@ const voab = [
       reqSkill(SKILLS.WEAPON_SKILL, 5),
     ]),
     keywords: 'Imperium,Adeptus Astartes,[Chapter],Psyker',
+    hint: 'A powerful psyker and keeper of forbidden lore, wielding the might of the warp in service to the Chapter.',
     archetypeFeatures: [
       {
         name: 'Sanctified Sorcerer',
@@ -3719,8 +3711,6 @@ const voab = [
     ],
     influence: 2,
   },
-
-  // PRIMARIS REIVER
   {
     ...archetype(source.voab.key, 34, 'Adeptus Astartes', 'Primaris Reiver', 4, 'Primaris Astartes'),
     ...costz(288, [
@@ -3738,6 +3728,7 @@ const voab = [
       reqSkill(SKILLS.WEAPON_SKILL, 4),
     ]),
     keywords: 'Imperium,Adeptus Astartes,Primaris,[Chapter]',
+    hint: 'A terror troop, expert in shock tactics and psychological warfare, sowing fear among the enemy.',
     archetypeFeatures: [
       {
         name: 'Terror Tactics',
@@ -3756,8 +3747,6 @@ const voab = [
     ],
     influence: 1,
   },
-
-  // TERMINATOR
   {
     ...archetype(source.voab.key, 35, 'Adeptus Astartes', 'Terminator', 4, 'Adeptus Astartes'),
     ...costz(365, [
@@ -3775,6 +3764,7 @@ const voab = [
       reqSkill(SKILLS.WEAPON_SKILL, 5),
     ]),
     keywords: 'Imperium,Adeptus Astartes,[Chapter]',
+    hint: 'A walking tank, encased in Tactical Dreadnought Armour and leading the charge against the deadliest foes.',
     archetypeFeatures: [
       {
         name: 'Tactical Master',
@@ -3802,8 +3792,6 @@ const voab = [
     ],
     influence: 4,
   },
-
-  // ASTARTES TECHMARINE
   {
     ...archetype(source.voab.key, 36, 'Adeptus Astartes', 'Astartes Techmarine', 4, 'Adeptus Astartes'),
     ...costz(357, [
@@ -3824,6 +3812,7 @@ const voab = [
       reqSkill(SKILLS.WEAPON_SKILL, 5),
     ]),
     keywords: 'Imperium,Adeptus Astartes,[Chapter]',
+    hint: 'A master of machines and battlefield repairs, maintaining the Chapter’s wargear and vehicles in the heat of battle.',
     archetypeFeatures: [
       {
         name: 'Blessings of the Omnissiah',
@@ -3856,8 +3845,6 @@ const voab = [
     ],
     influence: 2,
   },
-
-  // PRIMARIS LIEUTENANT
   {
     ...archetype(source.voab.key, 37, 'Adeptus Astartes', 'Primaris Lieutenant', 5, 'Primaris Astartes'),
     ...costz(365, [
@@ -3874,6 +3861,7 @@ const voab = [
       reqSkill(SKILLS.LEADERSHIP, 4),
       reqSkill(SKILLS.WEAPON_SKILL, 5),
     ]),
+    hint: 'A skilled battlefield commander, leading Primaris Space Marines with tactical acumen and inspiring presence.',
     keywords: 'Imperium,Adeptus Astartes,Primaris,[Chapter]',
     archetypeFeatures: [
       {
@@ -3920,11 +3908,8 @@ const voab = [
     ],
     influence: 4,
   },
-
-  // PRIMARIS BLADEGUARD VETERAN
   {
     ...archetype(source.voab.key, 38, 'Adeptus Astartes', 'Primaris Bladeguard Veteran', 5, 'Primaris Astartes'),
-    // XP not given, but Tier 5, so set as appropriate (e.g., 365)
     ...costz(365, [
       reqAttribute(ATTRIBUTES.STRENGTH, 5),
       reqAttribute(ATTRIBUTES.TOUGHNESS, 5),
@@ -3940,6 +3925,7 @@ const voab = [
       reqSkill(SKILLS.WEAPON_SKILL, 5),
     ]),
     keywords: 'Imperium,Adeptus Astartes,Primaris,[Chapter]',
+    hint: 'An elite swordsman and shield-bearer, standing at the forefront of battle and holding the line against all odds.',
     archetypeFeatures: [
       {
         name: 'Sword Master',
@@ -3958,8 +3944,6 @@ const voab = [
     ],
     influence: 3,
   },
-
-  // PRIMARIS COMPANY ANCIENT
   {
     ...archetype(source.voab.key, 39, 'Adeptus Astartes', 'Primaris Company Ancient', 5, 'Primaris Astartes'),
     ...costz(315, [
@@ -3977,6 +3961,7 @@ const voab = [
       reqSkill(SKILLS.WEAPON_SKILL, 5),
     ]),
     keywords: 'Imperium,Adeptus Astartes,Primaris,[Chapter]',
+    hint: 'A revered standard-bearer, inspiring Space Marines to acts of valor and restoring hope in the darkest hours.',
     archetypeFeatures: [
       {
         name: 'Glory of the Emperor',

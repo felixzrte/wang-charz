@@ -3404,67 +3404,67 @@ const voab = [
   // MELEE WEAPONS
   {
     ...gear(source.voab.key, 62, 'Crozius Arcanum', '6R', 'POWER FIELD, IMPERIUM, ADEPTUS ASTARTES'),
-    ...meleez('Power Weapon', 'S+5', 4, -2, 1, 'Brutal')
+    ...meleez('Power Weapon', 5, 4, -2, 1, 'Brutal')
   },
   {
     ...gear(source.voab.key, 62, 'Heavy Thunder Hammer', '6L', '2-HANDED, POWER FIELD, IMPERIUM, ADEPTUS ASTARTES'),
-    ...meleez('Power Weapon', 'S+10', 8, -3, 2, 'Brutal,Unwieldy(3)')
+    ...meleez('Power Weapon', 10, 8, -3, 2, 'Brutal,Unwieldy(3)')
   },
   {
     ...gear(source.voab.key, 62, 'Lightning Claws', '8R', 'POWER FIELD, IMPERIUM, ADEPTUS ASTARTES'),
-    ...meleez('Power Weapon', 'S+5', 5, -3, 1, 'Brutal,Rending(2)')
+    ...meleez('Power Weapon', 5, 5, -3, 1, 'Brutal,Rending(2)')
   },
   {
     ...gear(source.voab.key, 62, 'Gladius Revelationis', '', '2-HANDED, POWER FIELD, IMPERIUM, ADEPTUS ASTARTES'),
-    ...meleez('Power Weapon', 'S+10', 6, -3, 1, 'Brutal,Rending(2),Unwieldy(2)')
+    ...meleez('Power Weapon', 10, 6, -3, 1, 'Brutal,Rending(2),Unwieldy(2)')
   },
   {
     ...gear(source.voab.key, 62, 'Fames Sanguinius', '', '2-HANDED,POWER FIELD, IMPERIUM, ADEPTUS ASTARTES'),
-    ...meleez('Power Weapon', 'S+10', 6, -3, 1, 'Brutal,Rending(2),Unwieldy(2)')
+    ...meleez('Power Weapon', 10, 6, -3, 1, 'Brutal,Rending(2),Unwieldy(2)')
   },
   {
     ...gear(source.voab.key, 62, 'Relic Blade', '6V', 'IMPERIUM, ADEPTUS ASTARTES'),
-    ...meleez('Power Weapon', 'S+6', 5, -3, 1, 'Brutal,Parry')
+    ...meleez('Power Weapon', 6, 5, -3, 1, 'Brutal,Parry')
   },
   {
     ...gear(source.voab.key, 62, 'Force Sword', '6R', 'FORCE, IMPERIUM, ADEPTUS ASTARTES'),
-    ...meleez('Force Weapon', 'S+5', 4, -3, 1, 'Force,Parry')
+    ...meleez('Force Weapon', 5, 4, -3, 1, 'Force,Parry')
   },
   {
     ...gear(source.voab.key, 62, 'Force Axe', '6V', 'FORCE,IMPERIUM, ADEPTUS ASTARTES'),
-    ...meleez('Force Weapon', 'S+5', 5, -2, 1, 'Force')
+    ...meleez('Force Weapon', 5, 5, -2, 1, 'Force')
   },
   {
     ...gear(source.voab.key, 62, 'Power Sword', '6R', 'POWER FIELD, IMPERIUM, ADEPTUS ASTARTES'),
-    ...meleez('Power Weapon', 'S+5', 4, -3, 1, 'Parry')
+    ...meleez('Power Weapon', 5, 4, -3, 1, 'Parry')
   },
   {
     ...gear(source.voab.key, 62, 'Chainsword', '4U', 'CHAIN, IMPERIUM, ADEPTUS ASTARTES'),
-    ...meleez('Chain Weapon', 'S+5', 4, 0, 1, 'Brutal,Parry')
+    ...meleez('Chain Weapon', 5, 4, 0, 1, 'Brutal,Parry')
   },
   {
     ...gear(source.voab.key, 62, 'Power Fist', '8V', 'POWER FIELD, IMPERIUM, ADEPTUS ASTARTES'),
-    ...meleez('Power Weapon', 'S+5', 5, -3, 1, 'Brutal,Unwieldy(2)')
+    ...meleez('Power Weapon', 5, 5, -3, 1, 'Brutal,Unwieldy(2)')
   },
   {
     ...gear(source.voab.key, 62, 'Thunder Hammer', '9L', '2-HANDED, POWER FIELD, IMPERIUM, ADEPTUS ASTARTES'),
-    ...meleez('Power Weapon', 'S+8', 6, -3, 2, 'Brutal,Unwieldy(2)')
+    ...meleez('Power Weapon', 8, 6, -3, 2, 'Brutal,Unwieldy(2)')
   },
   {
     ...gear(source.voab.key, 62, 'Power Axe', '6R', 'POWER FIELD, IMPERIUM, ADEPTUS ASTARTES'),
-    ...meleez('Power Weapon', 'S+5', 5, -2, 1, 'Rending(1)')
+    ...meleez('Power Weapon', 5, 5, -2, 1, 'Rending(1)')
   },
   {
     ...gear(source.voab.key, 62, 'Eviscerator', '6R', '2-HANDED, POWER FIELD, IMPERIUM, ADEPTUS ASTARTES'),
-    ...meleez('Power Weapon', 'S+6', 6, -4, 2, 'Brutal,Unwieldy(2)')
+    ...meleez('Power Weapon', 6, 6, -4, 2, 'Brutal,Unwieldy(2)')
   },
   {
     ...gear(source.voab.key, 62, 'Astartes Combat Knife', '3U', 'IMPERIUM, ADEPTUS ASTARTES'),
-    ...meleez('Astartes Weapon', 'S+3', 2, -1, 1, 'Reliable')
+    ...meleez('Astartes Weapon', 3, 2, -1, 1, 'Reliable')
   },
   {
     ...gear(source.voab.key, 62, 'Siege Drills', '10L', '2-HANDED,IMPERIUM, ADEPTUS ASTARTES'),
-    ...meleez('Power Weapon', 'S+12', 8, -4, 1, 'Brutal,Unwieldy(4)')
+    ...meleez('Power Weapon', 12, 8, -4, 1, 'Brutal,Unwieldy(4)')
   },
  // RANGED WEAPONS
   {
@@ -3651,7 +3651,7 @@ const voab = [
     description: '<p>+1 AR and Bulky (1) to any armour with both the POWERED and ADEPTUS ASTARTES Keywords. Reduce any Flight Speed by -2.</p>',
   },
   {
-    ...gear(source.voab.key, 73, 'Astartes Servo-Arm', '7V', 'Augmetic,Imperium,Adeptus Astartes'),
+    ...gear(source.voab.key, 73, 'Astartes Servo-Arm', '7V', 'Augmetics,Imperium,Adeptus Astartes'),
     type: 'Augmetic',
     snippet: 'Powerful Techmarine augmetic limb.',
     description: '<p>You gain +5 Strength when using the Astartes Servo-Arm. Allows you to Brace as a Free Action in combat. Adds +1 bonus die to all Tech (Int) Tests for engineering tasks, and can be used as a melee weapon.</p>',
@@ -3669,7 +3669,7 @@ const voab = [
     description: '<p>Functions as an AR 3 Invulnerable force field and gives +1 to all Leadership (Wil) and Intimidation (Wil) Tests against creatures with the ADEPTUS ASTARTES Keyword.</p>',
   },
   {
-    ...gear(source.voab.key, 74, 'Molecular Bonding Studs', '7V', 'Augmetic,Imperium,Adeptus Astartes'),
+    ...gear(source.voab.key, 74, 'Molecular Bonding Studs', '7V', 'Augmetics,Imperium,Adeptus Astartes'),
     type: 'Augmetic',
     snippet: 'Shoulder studs for extra protection.',
     description: '<p>Power armour fitted with Molecular Bonding Studs can equip additional armour plates. These grant +2 AR but are destroyed if the wearer is struck by a weapon with AP better than -3 (after the attack is resolved). Plates can be replaced by a Tech-Priest or Techmarine.</p>',
