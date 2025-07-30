@@ -3380,6 +3380,7 @@ const voab = [
       },
     ],
     influence: 1,
+    
   },
   {
     ...archetype(source.voab.key, 27, 'Adeptus Astartes', 'Tactical Space Marine', 3, 'Adeptus Astartes'),
@@ -3575,6 +3576,21 @@ const voab = [
       { name: 'Krak Grenade', amount: 3 },
     ],
     influence: 1,
+    suggestedStats: [
+      ...suggestedAttributes(5,5,6,6,5,4,1),
+      reqSkill(SKILLS.ATHLETICS, 3),
+      reqSkill(SKILLS.AWARENESS, 5),
+      reqSkill(SKILLS.BALLISTIC_SKILL, 6),
+      reqSkill(SKILLS.STEALTH, 5),
+      reqSkill(SKILLS.WEAPON_SKILL, 4),
+    ],
+    suggested: {
+      talents: [
+        'core-bolter-discipline',
+        'core-deadshot',
+        'core-eliminator',
+      ],
+    },
   },
   {
     ...archetype(source.voab.key, 31, 'Adeptus Astartes', 'Primaris Incursor', 4, 'Primaris Astartes'),
@@ -3614,6 +3630,23 @@ const voab = [
       { name: 'Haywire Mine' },
     ],
     influence: 1,
+    suggestedStats: [
+      ...suggestedAttributes(6,5,5,5,4,4,1),
+      reqSkill(SKILLS.ATHLETICS, 3),
+      reqSkill(SKILLS.AWARENESS, 3),
+      reqSkill(SKILLS.BALLISTIC_SKILL, 5),
+      reqSkill(SKILLS.STEALTH, 4),
+      reqSkill(SKILLS.SURVIVAL, 3),
+      reqSkill(SKILLS.TECH, 5),
+      reqSkill(SKILLS.WEAPON_SKILL, 4),
+    ],
+    suggested: {
+      talents: [
+        'core-brutalist',
+        'core-fear',
+        'core-furious-charge',
+      ],
+    },
   },
   {
     ...archetype(source.voab.key, 32, 'Adeptus Astartes', 'Primaris Intercessor', 4, 'Primaris Astartes'),
@@ -3650,6 +3683,21 @@ const voab = [
       { name: 'Krak Grenade', amount: 3 },
     ],
     influence: 2,
+    suggestedStats: [
+      ...suggestedAttributes(5,5,6,6,5,4,1),
+      reqSkill(SKILLS.ATHLETICS, 3),
+      reqSkill(SKILLS.AWARENESS, 5),
+      reqSkill(SKILLS.BALLISTIC_SKILL, 6),
+      reqSkill(SKILLS.STEALTH, 5),
+      reqSkill(SKILLS.WEAPON_SKILL, 4),
+    ],
+    suggested: {
+      talents: [
+        'core-bolter-discipline',
+        'core-deadshot',
+        'core-eliminator',
+      ],
+    },
   },
   {
     ...archetype(source.voab.key, 33, 'Adeptus Astartes', 'Astartes Librarian', 4, 'Adeptus Astartes'),
@@ -3746,6 +3794,22 @@ const voab = [
       { name: 'Grav-Chute' },
     ],
     influence: 1,
+    suggestedStats: [
+      ...suggestedAttributes(6,5,4,6,5,3,1),
+      reqSkill(SKILLS.ATHLETICS, 3),
+      reqSkill(SKILLS.AWARENESS, 3),
+      reqSkill(SKILLS.BALLISTIC_SKILL, 4),
+      reqSkill(SKILLS.INTIMIDATION, 5),
+      reqSkill(SKILLS.STEALTH, 4),
+      reqSkill(SKILLS.WEAPON_SKILL, 4),
+    ],
+    suggested: {
+      talents: [
+        'core-brutalist',
+        'core-fear',
+        'core-furious-charge',
+      ],
+    },
   },
   {
     ...archetype(source.voab.key, 35, 'Adeptus Astartes', 'Terminator', 4, 'Adeptus Astartes'),
@@ -3791,6 +3855,21 @@ const voab = [
       { name: 'Krak Grenade', amount: 3 },
     ],
     influence: 4,
+    suggestedStats: [
+      ...suggestedAttributes(6,6,6,5,5,4,5),
+      reqSkill(SKILLS.ATHLETICS, 4),
+      reqSkill(SKILLS.AWARENESS, 4),
+      reqSkill(SKILLS.BALLISTIC_SKILL, 6),
+      reqSkill(SKILLS.LEADERSHIP, 5),
+      reqSkill(SKILLS.WEAPON_SKILL, 6),
+    ],
+    suggested: {
+      talents: [
+        'core-augmetic',
+        'core-primaris-perspective',
+        'core-touched-by-fate',
+      ],
+    },
   },
   {
     ...archetype(source.voab.key, 36, 'Adeptus Astartes', 'Astartes Techmarine', 4, 'Adeptus Astartes'),
@@ -3907,6 +3986,21 @@ const voab = [
       },
     ],
     influence: 4,
+    suggestedStats: [
+      ...suggestedAttributes(6,6,6,5,5,4,5),
+      reqSkill(SKILLS.ATHLETICS, 4),
+      reqSkill(SKILLS.AWARENESS, 4),
+      reqSkill(SKILLS.BALLISTIC_SKILL, 6),
+      reqSkill(SKILLS.LEADERSHIP, 5),
+      reqSkill(SKILLS.WEAPON_SKILL, 6),
+    ],
+    suggested: {
+      talents: [
+        'core-augmetic',
+        'core-primaris-perspective',
+        'core-touched-by-fate',
+      ],
+    },
   },
   {
     ...archetype(source.voab.key, 38, 'Adeptus Astartes', 'Primaris Bladeguard Veteran', 5, 'Primaris Astartes'),
@@ -3943,6 +4037,22 @@ const voab = [
       { name: 'Haywire Mine' },
     ],
     influence: 3,
+    suggestedStats: [
+      ...suggestedAttributes(6,6,6,7,5,4,2),
+      reqSkill(SKILLS.ATHLETICS, 4),
+      reqSkill(SKILLS.AWARENESS, 5),
+      reqSkill(SKILLS.BALLISTIC_SKILL, 5),
+      reqSkill(SKILLS.LEADERSHIP, 4),
+      reqSkill(SKILLS.WEAPON_SKILL, 6),
+    ],
+    suggested: {
+      talents: [
+        'core-counter-attack',
+        'core-fearless',
+        'core-feel-no-pain',
+        'core-furious-charge',
+      ],
+    },
   },
   {
     ...archetype(source.voab.key, 39, 'Adeptus Astartes', 'Primaris Company Ancient', 5, 'Primaris Astartes'),
@@ -3978,6 +4088,21 @@ const voab = [
       { name: 'Krak Grenade', amount: 3 },
     ],
     influence: 4,
+    suggestedStats: [
+      ...suggestedAttributes(6,6,6,6,5,3,3),
+      reqSkill(SKILLS.ATHLETICS, 4),
+      reqSkill(SKILLS.AWARENESS, 5),
+      reqSkill(SKILLS.BALLISTIC_SKILL, 6),
+      reqSkill(SKILLS.LEADERSHIP, 2),
+      reqSkill(SKILLS.WEAPON_SKILL, 7),
+    ],
+    suggested: {
+      talents: [
+        'core-duty-until-death',
+        'core-orthopraxy',
+        'core-primaris-perspective',
+      ],
+    },
   },
 ];
 
