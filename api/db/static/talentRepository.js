@@ -24,6 +24,10 @@ const talent = function (sourceKey, sourcePage, name, cost, tags = '') {
 const requireAttribute = function(key, value) {
   return { condition: 'must', type: 'attribute', key, value };
 };
+  
+const requireTalent = function(value) {
+  return { condition: 'must', type: 'talent', value };
+};
 
 const requireSkill = function(key, value) {
   return { condition: 'must', type: 'skill', key, value };
@@ -3167,6 +3171,200 @@ const voab = [
       '<p>By spending an extra point of Faith, affected targets may reroll a number of attack dice equal to your Rank, including the Wrath die.</p>',
     requirementsString: 'Adeptus Astartes, Ballistic Skill 6+',
     requirements: [ requireKeyword('Adeptus Astartes'), requireSkill('ballisticSkill', 6) ],
+  },
+  {
+    ...talent(source.voab.key, 60, 'Hellblaster Doctrine', 60),
+    key: stringToKebab('voab hellblaster doctrine'),
+    snippet: 'Primaris Intercessor: Receive a Plasma Incinerator, Assault Plasma Incinerator, or Plasma Pistol. +Rank AP with this weapon. Ignore first Complication damage with Supercharge. Can trade bonus ED for Spread.',
+    description: `
+      <p>Primaris Astartes may specialise in particular forms of warfare and death-dealing. Hellblasters focus upon the use of heavy weaponry, like their Devastator kin. However, thanks to the innovations and arcane technologies of Archmagos Dominus Belisarius Cawl, Hellblasters wield variants of Plasma Incinerators.</p>
+      <ul>
+        <li>If you don’t already have one, you receive one of the following weapons: Plasma Incinerator, Assault Plasma Incinerator, or Plasma Pistol.</li>
+        <li>You gain an additional +Rank AP when using this weapon.</li>
+        <li>During an adventure, you may ignore the first instance of damage inflicted due to a Complication when firing a Plasma weapon using the Supercharge option.</li>
+        <li>When firing a Plasma weapon using Supercharge, you may trade the bonus Extra Damage for the Spread trait (still at risk of Complication damage as normal).</li>
+      </ul>
+    `,
+    requirementsString: 'PRIMARIS INTERCESSOR',
+    requirements: [
+      requireKeyword('Primaris Intercessor')
+    ],
+    wargear: [
+      {
+        name: 'Plasma Weapon',
+        selected: '',
+        options: [
+          { key: 'plasma-incinerator', name: 'Plasma Incinerator' },
+          { key: 'assault-plasma-incinerator', name: 'Assault Plasma Incinerator' },
+          { key: 'plasma-pistol', name: 'Plasma Pistol' }
+        ]
+      }
+    ],
+    modifications: [
+      { targetGroup: 'wargear', targetValue: 'selected', meta: { apBonus: 'Rank' } }
+    ]
+  },
+
+  // Eradicator Doctrine
+  {
+    ...talent(source.voab.key, 60, 'Eradicator Doctrine', 60),
+    key: stringToKebab('voab eradicator doctrine'),
+    snippet: 'Primaris Intercessor: Receive Mark X Gravis armour and Melta Rifle or Heavy Melta Rifle. +Rank AP with this weapon. Spend Glory for extra ED with melta.',
+    description: `
+      <p>Similar to their Hellblaster brothers, Eradicators offer fire support to battleline units. Rather than volleys of plasma, Eradicators stride forward in thick Gravis plate, employing the advance melta weaponry of Belisarius Cawl to sunder armour and fortifications alike.</p>
+      <ul>
+        <li>You receive Mark X Gravis armour if you don’t already have it and one of the following weapons: Melta Rifle or Heavy Melta Rifle.</li>
+        <li>You gain additional +Rank AP when using this weapon.</li>
+        <li>When rolling the Extra Damage dice for an attack made with a melta weapon, you may spend one Glory, up to your Rank Bonus, to add an Extra Damage dice per point of Glory spent to the damage dealt.</li>
+      </ul>
+    `,
+    requirementsString: 'PRIMARIS INTERCESSOR',
+    requirements: [
+      requireKeyword('Primaris Intercessor')
+    ],
+    wargear: [
+      { key: 'mark-x-gravis-armour', name: 'Mark X Gravis Armour' },
+      {
+        name: 'Melta Weapon',
+        selected: '',
+        options: [
+          { key: 'melta-rifle', name: 'Melta Rifle' },
+          { key: 'heavy-melta-rifle', name: 'Heavy Melta Rifle' }
+        ]
+      }
+    ],
+    modifications: [
+      { targetGroup: 'wargear', targetValue: 'selected', meta: { apBonus: 'Rank' } }
+    ]
+  },
+
+  // Heavy Intercessor Doctrine
+  {
+    ...talent(source.voab.key, 60, 'Heavy Intercessor Doctrine', 60),
+    key: stringToKebab('voab heavy intercessor doctrine'),
+    snippet: 'Primaris Intercessor: Receive Mark X Gravis armour and Heavy Bolt Rifle or Heavy Bolter. +Rank AP with this weapon. Gain Bolter Discipline Talent.',
+    description: `
+      <p>While Eradicators and Hellblasters are deployed to tackle heavily armoured troops and vehicles with their searing energy weapons, Heavy Intercessors lay down a withering storm of bolter rounds to tear through troops.</p>
+      <ul>
+        <li>You receive Mark X Gravis armour if you don’t already have it and one of the following weapons: Heavy Bolt Rifle or Heavy Bolter.</li>
+        <li>You gain additional +Rank AP when using this weapon.</li>
+        <li>You gain the Bolter Discipline Talent.</li>
+      </ul>
+    `,
+    requirementsString: 'PRIMARIS INTERCESSOR',
+    requirements: [
+      requireKeyword('Primaris Intercessor')
+    ],
+    wargear: [
+      { key: 'mark-x-gravis-armour', name: 'Mark X Gravis Armour' },
+      {
+        name: 'Heavy Bolter Weapon',
+        selected: '',
+        options: [
+          { key: 'heavy-bolt-rifle', name: 'Heavy Bolt Rifle' },
+          { key: 'heavy-bolter', name: 'Heavy Bolter' }
+        ]
+      }
+    ],
+    modifications: [
+      { targetGroup: 'wargear', targetValue: 'selected', meta: { apBonus: 'Rank' } },
+      { targetGroup: 'talents', targetValue: 'voab-bolter-discipline', meta: { name: 'Bolter Discipline' } }
+    ]
+  },
+
+  // Assault Intercessor Doctrine
+  {
+    ...talent(source.voab.key, 60, 'Assault Intercessor Doctrine', 60),
+    key: stringToKebab('voab assault intercessor doctrine'),
+    snippet: 'Primaris Intercessor: Receive Heavy Bolt Pistol and Astartes Chainsword. +Rank AP with these. Gain Chainsaw Warrior Talent.',
+    description: `
+      <p>With Eradicators, Hellblasters, and Heavy Intercessors shredding the enemy with a hail of gunfire, Assault Intercessors specialise in vicious close combat. These Primaris Intercessors leap from drop pods and Impulsors into the heaving throng of the enemy and tear them asunder with whirring chainswords and staccato bolt rounds from their pistols.</p>
+      <ul>
+        <li>You receive if you don’t already have them: Heavy Bolt Pistol and Astartes Chainsword.</li>
+        <li>You gain an additional +Rank AP when using these weapons.</li>
+        <li>You gain the Chainsaw Warrior Talent.</li>
+      </ul>
+    `,
+    requirementsString: 'PRIMARIS INTERCESSOR',
+    requirements: [
+      requireKeyword('Primaris Intercessor')
+    ],
+    wargear: [
+      { key: 'heavy-bolt-pistol', name: 'Heavy Bolt Pistol' },
+      { key: 'astartes-chainsword', name: 'Astartes Chainsword' }
+    ],
+    modifications: [
+      { targetGroup: 'wargear', targetValue: 'heavy-bolt-pistol', meta: { apBonus: 'Rank' } },
+      { targetGroup: 'wargear', targetValue: 'astartes-chainsword', meta: { apBonus: 'Rank' } },
+      { targetGroup: 'talents', targetValue: 'voab-chainsaw-warrior', meta: { name: 'Chainsaw Warrior' } }
+    ]
+  },
+
+  // Assault Doctrine
+  {
+    ...talent(source.voab.key, 61, 'Assault Doctrine', 30),
+    key: stringToKebab('voab assault doctrine'),
+    snippet: 'Adeptus Astartes, Tier 3+: Receive Bolt Pistol, Chainsword, Mark VII Aquila Power Armour, Jump Pack. +Rank AP with melee or Pistol weapons.',
+    description: `
+      <p>You fight at the vanguard of any advance, howling across the battlefield to bring the might of your transhuman physiology to bear.</p>
+      <ul>
+        <li>You receive a Bolt Pistol, Chainsword, Mark VII Aquila Power Armour, and Jump Pack if you don’t already have them.</li>
+        <li>You gain additional +Rank AP on any melee weapon you wield or any ranged weapons with the Pistol Trait.</li>
+      </ul>
+    `,
+    requirementsString: 'Adeptus Astartes Species, Tier 3+',
+    requirements: [
+      requireSpecies('Adeptus Astartes'),
+      requireTier(3)
+    ],
+    wargear: [
+      { key: 'bolt-pistol', name: 'Bolt Pistol' },
+      { key: 'chainsword', name: 'Chainsword' },
+      { key: 'mark-vii-aquila-armour', name: 'Mark VII Aquila Power Armour' },
+      { key: 'jump-pack', name: 'Jump Pack' }
+    ],
+    modifications: [
+      { targetGroup: 'wargear', targetValue: 'melee', meta: { apBonus: 'Rank' } },
+      { targetGroup: 'wargear', targetValue: 'pistol', meta: { apBonus: 'Rank' } }
+    ]
+  },
+
+  // Devastator Doctrine
+  {
+    ...talent(source.voab.key, 61, 'Devastator Doctrine', 30),
+    key: stringToKebab('voab devastator doctrine'),
+    snippet: 'Adeptus Astartes, Tier 3+: Receive Mark VII Aquila Power Armour and a heavy weapon. +Rank AP with this weapon.',
+    description: `
+      <p>An Astartes who becomes a full battle-brother usually starts as a Devastator Marine, mastering the strategic application of overwhelming firepower.</p>
+      <ul>
+        <li>You receive a suit of Mark VII Aquila Power Armour if you don’t already have one, and any one of the following weapons: Heavy Bolter, Heavy Flamer, Lascannon, Missile Launcher, Multi-Melta, Plasma Cannon.</li>
+        <li>You gain additional +Rank AP when using this weapon.</li>
+        <li>An Agent Ascending from Tier 2 to Tier 3 may purchase this Talent instead of an Ascension Package.</li>
+      </ul>
+    `,
+    requirementsString: 'Adeptus Astartes Species, Tier 3+',
+    requirements: [
+      requireSpecies('Adeptus Astartes'),
+      requireTier(3)
+    ],
+    wargear: [
+      { key: 'mark-vii-aquila-armour', name: 'Mark VII Aquila Power Armour' },
+      {
+        name: 'Heavy Weapon',
+        selected: '',
+        options: [
+          { key: 'heavy-bolter', name: 'Heavy Bolter' },
+          { key: 'heavy-flamer', name: 'Heavy Flamer' },
+          { key: 'lascannon', name: 'Lascannon' },
+          { key: 'missile-launcher', name: 'Missile Launcher' },
+          { key: 'multi-melta', name: 'Multi-Melta' },
+          { key: 'plasma-cannon', name: 'Plasma Cannon' }
+        ]
+      }
+    ],
+    modifications: [
+      { targetGroup: 'wargear', targetValue: 'selected', meta: { apBonus: 'Rank' } }
+    ]
   },
 ]
 

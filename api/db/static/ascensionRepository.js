@@ -1746,21 +1746,20 @@ const goen = [
 const voab = [
   {
     name: 'Battle Company Doctrine',
-    ...simpleStub(source.voab.key, 43,'Battle Company Doctrine','', false),
+    ...simpleStub(source.voab.key, 43, 'Battle Company Doctrine', '', false),
     cost: 60,
     costPerTier: 0,
     minimumCampaignTier: 3,
     prerequisites: ['Adeptus Astartes Species'],
-    // Benefits
     influenceBonus: 2,
     influencePerTier: 0,
     storyElementDescription:
-      '<p>You have battled across countless worlds and faced all manner of heretics and xenos threats. You have mastered numerous weapons and and your skills and conviction has earned you a place amongst a Battle Company of the Chapter.</p>',
+      '<p>You have battled across countless worlds and faced all manner of heretics and xenos threats. You have mastered numerous weapons and your skills and conviction have earned you a place amongst a Battle Company of the Chapter.</p>',
     ascensionFeatures: [
       {
         key: 'talent-choice',
         name: 'Talent Choice',
-        snippet: 'You gain a Talent of your choice from the list below.',
+        snippet: 'You gain Bolter Discipline, and either Built Tough or Chainsaw Warrior talent.',
         optionsPlaceholder: 'Talent choice',
         selected: [''],
         options: [
@@ -1793,7 +1792,7 @@ const voab = [
       {
         key: 'hatred',
         name: 'Hatred Talent',
-        snippet: 'You gain the Hatred Talent against a diferent enemy if you already possess one.',
+        snippet: 'You gain the Hatred Talent against a different enemy if you already possess one.',
         modifications: [
           { targetGroup: 'talents', targetValue: 'core-hatred', meta: { name: 'Hatred [Any]' } },
         ],
@@ -1822,53 +1821,52 @@ const voab = [
     ...simpleStub(source.voab.key, 43, 'Crux Terminatus', 'Veteran of the 1st Company, bearer of the Crux Terminatus.', false),
     cost: 60,
     costPerTier: 0,
-    minimumCampaignTier: 0,
+    minimumCampaignTier: 3,
     prerequisites: [
       '1st Company Veteran, Chaplain or Librarian Archetype',
     ],
-    influenceBonus: 2,
+    influenceBonus: 0,
     influencePerTier: 0,
     keywordString: 'Adeptus Astartes',
     storyElementDescription:
-      '<p>A 1st Company Veteran, Librarian, or Chaplain may begin with Terminator armour. Terminator armour comes with the following weapon combinations:</p>',
+      '<p>A 1st Company Veteran, Librarian, or Chaplain may begin with Terminator armour. Terminator armour comes with the following weapon combinations:</p>' +
+      '<ul>' +
+      '<li>Storm Bolter and Power Fist or Chainfist as standard.</li>' +
+      '<li>The Storm Bolter may be exchanged for a Heavy Flamer or Assault Cannon.</li>' +
+      '<li>Alternatively, the Powerfist/Chainfist may be exchanged for a Power Sword.</li>' +
+      '<li>The Storm Bolter and Powerfist/Chainfist can both be exchanged for a pair of Lightning Claws.</li>' +
+      '<li>If worn by a Chaplain, the Powerfist/Chainfist is replaced with a Crozius Arcanum.</li>' +
+      '<li>If worn by a Librarian, the Powerfist/Chainfist is replaced with a Force Weapon.</li>' +
+      '</ul>',
     ascensionFeatures: [
       {
         key: 'terminator-armour-requisition',
         name: 'Terminator Armour Requisition',
-        snippet: 'The character may request a Terminator Armour and accompanying Weapons or may begin the mission with +1 Wrath.',
-        description:
-          '<p>You  may begin with Terminator armour. Terminator armour comes with the following weapon combinations:</p>',
+        snippet: 'You may begin with Terminator armour and select a weapon combination.',
         modifications: [
           { targetGroup: 'wargear', targetValue: 'voab-terminator-armour', meta: { name: 'Terminator Armour' } },
-        ]
-      },
-      {
-        key: 'terminator-weapon-combinations',
-        name: 'Terminator Weapon Combinations',
+        ],
         selected: '',
         options: [
           {
-            key: 'lightning-claws',
-            name: 'Lightning Claws',
-            snippet: 'You gain a pair of Lightning Claws as your terminator weapons.',
-            modifications: [
-              { targetGroup: 'wargear', targetValue: 'aaoa-lightning-claw', meta: { name: 'Lightning Claw' } },
-              { targetGroup: 'wargear', targetValue: 'aaoa-lightning-claw', meta: { name: 'Lightning Claw' } },
-            ],
-          },
-          {
             key: 'power-fist-storm-bolter',
             name: 'Power Fist & Storm Bolter',
-            snippet: 'You gain a Power Fist and a Storm Bolter.',
             modifications: [
               { targetGroup: 'wargear', targetValue: 'power-fist', meta: { name: 'Power Fist' } },
               { targetGroup: 'wargear', targetValue: 'storm-bolter', meta: { name: 'Storm Bolter' } },
             ],
           },
           {
+            key: 'chainfist-storm-bolter',
+            name: 'Chainfist & Storm Bolter',
+            modifications: [
+              { targetGroup: 'wargear', targetValue: 'chainfist', meta: { name: 'Chainfist' } },
+              { targetGroup: 'wargear', targetValue: 'storm-bolter', meta: { name: 'Storm Bolter' } },
+            ],
+          },
+          {
             key: 'power-fist-heavy-flamer',
             name: 'Power Fist & Heavy Flamer',
-            snippet: 'You gain a Power Fist and a Heavy Flamer.',
             modifications: [
               { targetGroup: 'wargear', targetValue: 'power-fist', meta: { name: 'Power Fist' } },
               { targetGroup: 'wargear', targetValue: 'heavy-flamer', meta: { name: 'Heavy Flamer' } },
@@ -1877,25 +1875,14 @@ const voab = [
           {
             key: 'power-fist-assault-cannon',
             name: 'Power Fist & Assault Cannon',
-            snippet: 'You gain a Power Fist and an Assault Cannon.',
             modifications: [
               { targetGroup: 'wargear', targetValue: 'power-fist', meta: { name: 'Power Fist' } },
               { targetGroup: 'wargear', targetValue: 'assault-cannon', meta: { name: 'Assault Cannon' } },
             ],
           },
           {
-            key: 'chainfist-storm-bolter',
-            name: 'Chainfist & Storm Bolter',
-            snippet: 'You gain a Chainfist and a Storm Bolter.',
-            modifications: [
-              { targetGroup: 'wargear', targetValue: 'chainfist', meta: { name: 'Chainfist' } },
-              { targetGroup: 'wargear', targetValue: 'storm-bolter', meta: { name: 'Storm Bolter' } },
-            ],
-          },
-          {
             key: 'chainfist-heavy-flamer',
             name: 'Chainfist & Heavy Flamer',
-            snippet: 'You gain a Chainfist and a Heavy Flamer.',
             modifications: [
               { targetGroup: 'wargear', targetValue: 'chainfist', meta: { name: 'Chainfist' } },
               { targetGroup: 'wargear', targetValue: 'heavy-flamer', meta: { name: 'Heavy Flamer' } },
@@ -1904,7 +1891,6 @@ const voab = [
           {
             key: 'chainfist-assault-cannon',
             name: 'Chainfist & Assault Cannon',
-            snippet: 'You gain a Chainfist and an Assault Cannon.',
             modifications: [
               { targetGroup: 'wargear', targetValue: 'chainfist', meta: { name: 'Chainfist' } },
               { targetGroup: 'wargear', targetValue: 'assault-cannon', meta: { name: 'Assault Cannon' } },
@@ -1913,7 +1899,6 @@ const voab = [
           {
             key: 'power-sword-storm-bolter',
             name: 'Power Sword & Storm Bolter',
-            snippet: 'You gain a Power Sword and a Storm Bolter.',
             modifications: [
               { targetGroup: 'wargear', targetValue: 'power-sword', meta: { name: 'Power Sword' } },
               { targetGroup: 'wargear', targetValue: 'storm-bolter', meta: { name: 'Storm Bolter' } },
@@ -1922,7 +1907,6 @@ const voab = [
           {
             key: 'power-sword-heavy-flamer',
             name: 'Power Sword & Heavy Flamer',
-            snippet: 'You gain a Power Sword and a Heavy Flamer.',
             modifications: [
               { targetGroup: 'wargear', targetValue: 'power-sword', meta: { name: 'Power Sword' } },
               { targetGroup: 'wargear', targetValue: 'heavy-flamer', meta: { name: 'Heavy Flamer' } },
@@ -1931,16 +1915,22 @@ const voab = [
           {
             key: 'power-sword-assault-cannon',
             name: 'Power Sword & Assault Cannon',
-            snippet: 'You gain a Power Sword and an Assault Cannon.',
             modifications: [
               { targetGroup: 'wargear', targetValue: 'power-sword', meta: { name: 'Power Sword' } },
               { targetGroup: 'wargear', targetValue: 'assault-cannon', meta: { name: 'Assault Cannon' } },
             ],
           },
           {
+            key: 'lightning-claws',
+            name: 'Pair of Lightning Claws',
+            modifications: [
+              { targetGroup: 'wargear', targetValue: 'aaoa-lightning-claw', meta: { name: 'Lightning Claw' } },
+              { targetGroup: 'wargear', targetValue: 'aaoa-lightning-claw', meta: { name: 'Lightning Claw' } },
+            ],
+          },
+          {
             key: 'crozius-arcanum-storm-bolter',
-            name: '[ONLY FOR CHAPLAIN] Crozius Arcanum & Storm Bolter',
-            snippet: 'You gain a Crozius Arcanum and a Storm Bolter.',
+            name: '[Chaplain] Crozius Arcanum & Storm Bolter',
             modifications: [
               { targetGroup: 'wargear', targetValue: 'crozius-arcanum', meta: { name: 'Crozius Arcanum' } },
               { targetGroup: 'wargear', targetValue: 'storm-bolter', meta: { name: 'Storm Bolter' } },
@@ -1948,8 +1938,7 @@ const voab = [
           },
           {
             key: 'crozius-arcanum-heavy-flamer',
-            name: '[ONLY FOR CHAPLAIN] Crozius Arcanum & Heavy Flamer',
-            snippet: 'You gain a Crozius Arcanum and a Heavy Flamer.',
+            name: '[Chaplain] Crozius Arcanum & Heavy Flamer',
             modifications: [
               { targetGroup: 'wargear', targetValue: 'crozius-arcanum', meta: { name: 'Crozius Arcanum' } },
               { targetGroup: 'wargear', targetValue: 'heavy-flamer', meta: { name: 'Heavy Flamer' } },
@@ -1957,8 +1946,7 @@ const voab = [
           },
           {
             key: 'crozius-arcanum-assault-cannon',
-            name: '[ONLY FOR CHAPLAIN] Crozius Arcanum & Assault Cannon',
-            snippet: 'You gain a Crozius Arcanum and an Assault Cannon.',
+            name: '[Chaplain] Crozius Arcanum & Assault Cannon',
             modifications: [
               { targetGroup: 'wargear', targetValue: 'crozius-arcanum', meta: { name: 'Crozius Arcanum' } },
               { targetGroup: 'wargear', targetValue: 'assault-cannon', meta: { name: 'Assault Cannon' } },
@@ -1966,8 +1954,7 @@ const voab = [
           },
           {
             key: 'force-weapon-storm-bolter',
-            name: '[ONLY FOR LIBRARIAN] Force Weapon & Storm Bolter',
-            snippet: 'You gain a Force Weapon and a Storm Bolter.',
+            name: '[Librarian] Force Weapon & Storm Bolter',
             modifications: [
               { targetGroup: 'wargear', targetValue: 'force-weapon', meta: { name: 'Force Weapon' } },
               { targetGroup: 'wargear', targetValue: 'storm-bolter', meta: { name: 'Storm Bolter' } },
@@ -1975,8 +1962,7 @@ const voab = [
           },
           {
             key: 'force-weapon-heavy-flamer',
-            name: '[ONLY FOR LIBRARIAN] Force Weapon & Heavy Flamer',
-            snippet: 'You gain a Force Weapon and a Heavy Flamer.',
+            name: '[Librarian] Force Weapon & Heavy Flamer',
             modifications: [
               { targetGroup: 'wargear', targetValue: 'force-weapon', meta: { name: 'Force Weapon' } },
               { targetGroup: 'wargear', targetValue: 'heavy-flamer', meta: { name: 'Heavy Flamer' } },
@@ -1984,44 +1970,42 @@ const voab = [
           },
           {
             key: 'force-weapon-assault-cannon',
-            name: '[ONLY FOR LIBRARIAN] Force Weapon & Assault Cannon',
-            snippet: 'You gain a Force Weapon and an Assault Cannon.',
+            name: '[Librarian] Force Weapon & Assault Cannon',
             modifications: [
               { targetGroup: 'wargear', targetValue: 'force-weapon', meta: { name: 'Force Weapon' } },
               { targetGroup: 'wargear', targetValue: 'assault-cannon', meta: { name: 'Assault Cannon' } },
             ],
           },
-        ]
-      }
+        ],
+      },
     ],
   },
   {
     name: 'Rubicon Primaris',
-    ...simpleStub(source.voab.key, 43,'Rubicon Primaris','', false),
+    ...simpleStub(source.voab.key, 43, 'Rubicon Primaris', '', false),
     cost: 80,
     costPerTier: 0,
     minimumCampaignTier: 3,
     prerequisites: ['Adeptus Astartes Species'],
-    // Benefits
     influenceBonus: 2,
     influencePerTier: 0,
     storyElementDescription:
       '<p>Few Space Marines could refuse the prospect of being remade, stronger and faster, more capable of waging war against the enemies of the Imperium. You have undergone the extensive and agonising operation required to be implanted with the three additional organs needed to join your Primaris brethren and now count yourself among those who have crossed the Rubicon Primaris.</p>',
     ascensionFeatures: [
       {
-        key: 'built-tough',
-        name: 'Built Tough',
-        snippet: 'You get the Built Tough talent.',
-        modifications: [
-          { targetGroup: 'talents', targetValue: 'voab-built-tough', meta: { name: 'Built Tough' } },
-        ],
-      },
-      {
         key: 'bolter-discipline',
         name: 'Bolter Discipline',
         snippet: 'You gain the Bolter Discipline talent.',
         modifications: [
           { targetGroup: 'talents', targetValue: 'voab-bolter-discipline', meta: { name: 'Bolter Discipline' } },
+        ],
+      },
+      {
+        key: 'built-tough',
+        name: 'Built Tough',
+        snippet: 'You get the Built Tough talent.',
+        modifications: [
+          { targetGroup: 'talents', targetValue: 'voab-built-tough', meta: { name: 'Built Tough' } },
         ],
       },
       {
@@ -2035,7 +2019,7 @@ const voab = [
       {
         key: 'primaris-ascensions',
         name: 'Primaris Ascensions',
-        snippet: 'In the future you may choose from the Primaris Ascensions.',
+        snippet: 'In the future you may choose from the Primaris Ascension packages.',
       },
       {
         key: 'wargear',
@@ -2049,7 +2033,6 @@ const voab = [
                 filter: true,
                 valueFilter: { useCharacterTier: false, useSettingTier: false, useAscensionTargetTier: true, fixedValue: 3 },
                 rarityFilter: ['Uncommon'],
-                
               },
             ],
           },
@@ -2057,7 +2040,7 @@ const voab = [
       },
     ],
   },
-]
+];
 
 module.exports = [
   ...core,
