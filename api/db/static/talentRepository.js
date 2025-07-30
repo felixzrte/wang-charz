@@ -24,10 +24,6 @@ const talent = function (sourceKey, sourcePage, name, cost, tags = '') {
 const requireAttribute = function(key, value) {
   return { condition: 'must', type: 'attribute', key, value };
 };
-  
-const requireTalent = function(value) {
-  return { condition: 'must', type: 'talent', value };
-};
 
 const requireSkill = function(key, value) {
   return { condition: 'must', type: 'skill', key, value };
@@ -2803,7 +2799,7 @@ const voab = [
     requirementsString: 'Adeptus Astartes Keyword, Fear Talent',
     requirements: [
       requireKeyword('Adeptus Astartes'),
-      requireTalent('Fear'),
+      requireKeyword('Fear'),
     ],
   },
   {
@@ -3148,7 +3144,7 @@ const voab = [
       '<p>Denouncing the unrighteous, you call upon your allies to face down the foes of Mankind with steel in their hearts and their hands. Affected targets within 20m add +1 ED to damage on successful melee attacks.</p>' +
       '<p>By spending a further point of Faith, affected targets gain +1 die to melee attack Tests, and the effects of the Litany lasts for an additional round, even if the Chaplain moves out of range, or can no longer be heard.</p>',
     requirementsString: 'Adeptus Astartes, Frenzy Talent',
-    requirements: [ requireKeyword('Adeptus Astartes'), requireTalent('Frenzy') ],
+    requirements: [ requireKeyword('Adeptus Astartes'), requireKeyword('Frenzy') ],
   },
   {
     ...talent(source.voab.key, 58, 'Sword of the Emperor', 20),
@@ -3159,7 +3155,7 @@ const voab = [
       '<p>A single affected target with the Astartes Keyword, within 20m, inflicts with their next melee attack, if it hits, a number of Mortal Wounds equal to your Rank.</p>' +
       '<p>By spending a further point of Faith the effect of this Litany is sustained for a further round.</p>',
     requirementsString: 'Adeptus Astartes, Orthopraxy Talent',
-    requirements: [ requireKeyword('Adeptus Astartes'), requireTalent('Orthopraxy') ],
+    requirements: [ requireKeyword('Adeptus Astartes'), requireKeyword('Orthopraxy') ],
   },
   {
     ...talent(source.voab.key, 58, 'Recitation of Focus', 15),
