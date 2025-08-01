@@ -3472,19 +3472,19 @@ const voab = [
     ...rangez('Bolt Weapon', 16, 2, -1, 48, 3, 'Brutal,Heavy(8)')
   },
   {
-    ...gear(source.voab.key, 67, 'Astartes Grenade Launcher', '6R', 'Explosive,Imperium,Adeptus Astartes'),
+    ...gear(source.voab.key, 67, 'Astartes Grenade Launcher', '6U', 'Explosive,Imperium,Adeptus Astartes'),
     ...rangez('Grenade & Missile Weapon', '*', '*', '*', 30, '-', 'Assault')
   },
   {
-    ...gear(source.voab.key, 67, 'Auto Bolt Rifle', '7V', 'Bolt,Imperium,Adeptus Astartes,Primaris'),
+    ...gear(source.voab.key, 67, 'Auto Bolt Rifle', '8V', 'Bolt,Imperium,Adeptus Astartes,Primaris'),
     ...rangez('Bolt Weapon', 10, 1, 0, 24, 3, 'Assault,Brutal,Rapid Fire(3)')
   },
   {
-    ...gear(source.voab.key, 67, 'Centurion Missile Launcher', '7V', 'Explosive,Imperium,Adeptus Astartes'),
+    ...gear(source.voab.key, 67, 'Centurion Missile Launcher', '6U', 'Explosive,Imperium,Adeptus Astartes'),
     ...rangez('Grenade & Missile Weapon', 14, 3, -2, 36, 2, 'Heavy(6),Blast(Medium)')
   },
   {
-    ...gear(source.voab.key, 67, 'Executor Bolt Rifle', '8V', 'Bolt,Imperium,Adeptus Astartes'),
+    ...gear(source.voab.key, 67, 'Executor Bolt Rifle', '6R', 'Bolt,Imperium,Adeptus Astartes'),
     ...rangez('Bolt Weapon', 12, 2, -1, 30, 2, 'Brutal,Rapid Fire(2)')
   },
   {
@@ -3496,23 +3496,23 @@ const voab = [
     ...rangez('Projectile Weapon', 8, 1, -6, 12, 18, 'Assault')
   },
   {
-    ...gear(source.voab.key, 67, 'Heavy Bolt Rifle', '7V', 'Bolt,Imperium,Adeptus Astartes,Primaris'),
+    ...gear(source.voab.key, 67, 'Heavy Bolt Rifle', '8V', 'Bolt,Imperium,Adeptus Astartes,Primaris'),
     ...rangez('Bolt Weapon', 12, 2, -2, 30, 1, 'Brutal,Heavy(4),Rapid Fire(1)')
   },
   {
-    ...gear(source.voab.key, 67, 'Hellstorm Bolt Rifle', '7V', 'Bolt,Imperium,Adeptus Astartes,Primaris'),
+    ...gear(source.voab.key, 67, 'Hellstorm Bolt Rifle', '6R', 'Bolt,Imperium,Adeptus Astartes,Primaris'),
     ...rangez('Bolt Weapon', 10, 1, 0, 18, 4, 'Assault,Brutal,Rapid Fire(4)')
   },
   {
-    ...gear(source.voab.key, 67, 'Las Fusil', '7V', 'Las,Imperium,Adeptus Astartes,Primaris'),
+    ...gear(source.voab.key, 67, 'Las Fusil', '5U', 'Las,Imperium,Adeptus Astartes,Primaris'),
     ...rangez('Las Weapon', 15, 3, -3, 36, 1, 'Heavy(6)')
   },
   {
-    ...gear(source.voab.key, 67, 'Bolt Pistol', '5R', 'Bolt,Imperium,Adeptus Astartes'),
+    ...gear(source.voab.key, 67, 'Bolt Pistol', '4U', 'Bolt,Imperium,Adeptus Astartes'),
     ...rangez('Bolt Weapon', 10, 1, 0, 12, 1, 'Brutal,Pistol')
   },
   {
-    ...gear(source.voab.key, 67, 'Heavy Bolt Pistol', '6R', 'Bolt,Imperium,Adeptus Astartes,Primaris'),
+    ...gear(source.voab.key, 67, 'Heavy Bolt Pistol', '7V', 'Bolt,Imperium,Adeptus Astartes,Primaris'),
     ...rangez('Bolt Weapon', 10, 2, -1, 12, 1, 'Brutal,Pistol')
   },
   {
@@ -3524,31 +3524,31 @@ const voab = [
     ...rangez('Bolt Weapon', 10, 1, 0, 24, 4, 'Brutal,Rapid Fire(2)')
   },
   {
-    ...gear(source.voab.key, 67, 'Heavy Bolter', '7V', 'Bolt,Imperium,Adeptus Astartes'),
+    ...gear(source.voab.key, 67, 'Heavy Bolter', '6U', 'Bolt,Imperium,Adeptus Astartes'),
     ...rangez('Bolt Weapon', 14, 2, -1, 36, 3, 'Brutal,Heavy(6)')
   },
   {
-    ...gear(source.voab.key, 67, 'Assault Bolter', '7V', 'Bolt,Imperium,Adeptus Astartes,Primaris'),
+    ...gear(source.voab.key, 67, 'Assault Bolter', '8V', 'Bolt,Imperium,Adeptus Astartes,Primaris'),
     ...rangez('Bolt Weapon', 12, 1, -1, 18, 3, 'Assault,Brutal,Rapid Fire(3)')
   },
   {
-    ...gear(source.voab.key, 67, 'Grav Cannon', '7V', 'Grav,Imperium,Adeptus Astartes'),
+    ...gear(source.voab.key, 67, 'Grav Cannon', '8V', 'Grav,Imperium,Adeptus Astartes'),
     ...rangez('Grav Weapon', 8, 2, -3, 24, 4, 'Grav,Heavy(8)')
   },
   {
-    ...gear(source.voab.key, 67, 'Astartes Shotgun', '5R', 'Projectile,Imperium,Adeptus Astartes'),
+    ...gear(source.voab.key, 67, 'Astartes Shotgun', '6R', 'Projectile,Imperium,Adeptus Astartes'),
     ...rangez('Projectile Weapon', 9, 2, 0, 12, 1, 'Assault,Spread')
   },
   {
-    ...gear(source.voab.key, 67, 'Plasma Gun', '7V', 'Plasma,Imperium,Adeptus Astartes'),
+    ...gear(source.voab.key, 67, 'Plasma Gun', '6R', 'Plasma,Imperium,Adeptus Astartes'),
     ...rangez('Plasma Weapon', 14, 1, -3, 24, 2, 'Rapid Fire(1),Supercharge')
   },
   {
-    ...gear(source.voab.key, 67, 'Astartes Sniper Rifle', '6R', 'Projectile,Imperium,Adeptus Astartes'),
+    ...gear(source.voab.key, 67, 'Astartes Sniper Rifle', '6U', 'Projectile,Imperium,Adeptus Astartes'),
     ...rangez('Projectile Weapon', 10, 1, -1, 36, 1, 'Heavy(4),Sniper(3)')
   },
   {
-    ...gear(source.voab.key, 67, 'Melta Rifle', '8V', 'Melta,Imperium,Adeptus Astartes'),
+    ...gear(source.voab.key, 67, 'Melta Rifle', '6V', 'Melta,Imperium,Adeptus Astartes'),
     ...rangez('Melta Weapon', 16, 4, -4, 18, 1, 'Assault,Melta')
   },
   // WEAPON UPGRADES
