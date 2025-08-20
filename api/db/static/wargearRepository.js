@@ -882,7 +882,7 @@ const core = [
     ...armour('Aeldari Armour',5,'Bulk(1)'),
   },
   {
-    ...gear(source.core.key,235,'Shimmershield','7R','Force Field,Aeldari,Asuryani'),
+    ...gear(source.core.key,235,'Shimmershield','7L','Force Field,Aeldari,Asuryani'),
     ...armour('Aeldari Armour',2,'Power Field,Shield'),
   },
   // Armour - Ork Armour
@@ -3652,7 +3652,7 @@ const voab = [
   },
   {
     ...gear(source.voab.key, 73, 'Astartes Servo-Arm', '7V', 'Augmetics,Imperium,Adeptus Astartes'),
-    type: 'Augmetic',
+    type: 'Augmetics',
     snippet: 'Powerful Techmarine augmetic limb.',
     description: '<p>You gain +5 Strength when using the Astartes Servo-Arm. Allows you to Brace as a Free Action in combat. Adds +1 bonus die to all Tech (Int) Tests for engineering tasks, and can be used as a melee weapon.</p>',
   },
@@ -3670,7 +3670,7 @@ const voab = [
   },
   {
     ...gear(source.voab.key, 74, 'Molecular Bonding Studs', '7V', 'Augmetics,Imperium,Adeptus Astartes'),
-    type: 'Augmetic',
+    type: 'Augmetics',
     snippet: 'Shoulder studs for extra protection.',
     description: '<p>Power armour fitted with Molecular Bonding Studs can equip additional armour plates. These grant +2 AR but are destroyed if the wearer is struck by a weapon with AP better than -3 (after the attack is resolved). Plates can be replaced by a Tech-Priest or Techmarine.</p>',
   },
