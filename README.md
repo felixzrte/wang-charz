@@ -2,25 +2,6 @@
 
 A web application for creating and managing characters for the Wrath & Glory Warhammer 40k RPG.
 
-## Environment Setup
-
-Before running the application, you need to configure Contentful CMS credentials:
-
-1. Copy `.env.example` to `.env`:
-
-   ```bash
-   cp .env.example .env
-   ```
-
-2. Edit `.env` and add your Contentful credentials:
-
-   ```env
-   NUXT_ENV_CTF_SPACE_ID=your_contentful_space_id
-   NUXT_ENV_CTF_CD_ACCESS_TOKEN=your_contentful_access_token
-   ```
-
-> **Note:** The application will run without Contentful credentials, but homebrew content routes will return 503 errors.
-
 ## Development
 
 ### Option 1: Docker (Recommended)
@@ -104,8 +85,6 @@ docker build -t wang-charz:latest .
 
 # Run the container
 docker run -p 3000:3000 \
-  -e NUXT_ENV_CTF_SPACE_ID=your_space_id \
-  -e NUXT_ENV_CTF_CD_ACCESS_TOKEN=your_token \
   wang-charz:latest
 ```
 
@@ -118,7 +97,6 @@ For detailed explanation on how things work, checkout [Nuxt.js docs](https://nux
 - Character creation and management for Wrath & Glory RPG
 - Species, archetypes, talents, and wargear libraries
 - Psychic powers and ascension packages
-- Integration with Contentful CMS for homebrew content
 - Character PDF export
 - Bestiary and threat management
 
