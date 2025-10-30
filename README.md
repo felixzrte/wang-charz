@@ -96,10 +96,6 @@ $ npm run generate
 
 ## Deployment
 
-### Heroku Deployment
-
-See [HEROKU.md](HEROKU.md) for Heroku deployment instructions.
-
 ### Docker Production Deployment
 
 ```bash
