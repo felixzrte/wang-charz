@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - NODE_OPTIONS=--openssl-legacy-provider
+      # Add your Contentful credentials here or use .env file
+      - NUXT_ENV_CTF_SPACE_ID=${NUXT_ENV_CTF_SPACE_ID}
+      - NUXT_ENV_CTF_CD_ACCESS_TOKEN=${NUXT_ENV_CTF_CD_ACCESS_TOKEN}
+    volumes:
+      # Mount .env file if it exists
+      - ./.env:/app/.env:ro
+    restart: unless-stopped
+    container_name: wang-charz-app
+
+  # Development service with hot-reload
+  dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      - NODE_OPTIONS=--openssl-legacy-provider
+      - NUXT_ENV_CTF_SPACE_ID=${NUXT_ENV_CTF_SPACE_ID}
+      - NUXT_ENV_CTF_CD_ACCESS_TOKEN=${NUXT_ENV_CTF_CD_ACCESS_TOKEN}
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - ./.env:/app/.env:ro
+    command: npm run dev
+    restart: unless-stopped
+    container_name: wang-charz-dev
