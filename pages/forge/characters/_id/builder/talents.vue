@@ -9,9 +9,9 @@
         </h1>
       </v-col>
 
-      <v-progress-circular v-if="!talentList && !wargearList" indeterminate color="success" size="128" width="12" />
+      <v-progress-circular v-if="loading || (!talentList && !wargearList)" indeterminate color="success" size="128" width="12" />
 
-      <v-col :cols="12">
+      <v-col :cols="12" v-if="!loading && talentList">
         <v-expansion-panels multiple>
           <v-expansion-panel
             v-for="talent in characterTalentsEnriched"
@@ -389,17 +389,23 @@ export default {
   },
   computed: {
     settingHomebrews() {
-      return this.$store.getters['characters/characterSettingHomebrewsById'](this.characterId);
+      const homebrews = this.$store.getters['characters/characterSettingHomebrewsById'](this.characterId) || [];
+      console.log('settingHomebrews:', homebrews);
+      return homebrews;
     },
     sources() {
-      return [
+      const coreSource = [
         'core',
         'fspg',
         'red1',
         'cos',
+        // 'voab',
         // 'tnh',
-        ...this.settingHomebrews,
       ];
+      const homebrewSources = this.settingHomebrews || [];
+      const allSources = [...coreSource, ...homebrewSources];
+      console.log('Computed sources:', allSources);
+      return allSources;
     },
     remainingBuildPoints() {
       return this.$store.getters['characters/characterRemainingBuildPointsById'](this.characterId);
@@ -656,8 +662,12 @@ export default {
   watch: {
     sources: {
       handler(newVal) {
-        if (newVal) {
+        console.log('Sources changed:', newVal);
+        if (newVal && newVal.length > 0) {
+          console.log('Calling getTalents with sources:', newVal);
           this.getTalents(newVal);
+        } else {
+          console.warn('Sources is empty or undefined:', newVal);
         }
       },
       immediate: true, // make this watch function is called when component created
@@ -665,25 +675,39 @@ export default {
   },
   methods: {
     async getTalents(sources) {
+      console.log('getTalents called with:', sources);
       this.loading = true;
-      const config = {
-        params: { source: this.sources.join(','), },
-      };
-      {
-        const { data } = await this.$axios.get('/api/talents/', config);
-        this.talentList = data.map(talent => {
-          const prerequisitesHtml = this.requirementsToText(talent).join(', ');
-          return {
-            ...talent,
-            prerequisitesHtml,
-          }
-        });
+      try {
+        const config = {
+          params: { source: this.sources.join(','), },
+        };
+        console.log('Fetching talents with config:', config);
+        {
+          const { data } = await this.$axios.get('/api/talents/', config);
+          console.log('Talents loaded:', data.length);
+          this.talentList = data.map(talent => {
+            const prerequisitesHtml = this.requirementsToText(talent).join(', ');
+            return {
+              ...talent,
+              prerequisitesHtml,
+            }
+          });
+        }
+        {
+          const { data } = await this.$axios.get('/api/wargear/', config);
+          console.log('Wargear loaded:', data.length);
+          this.wargearList = data;
+        }
+        console.log('Loading complete. talentList:', this.talentList?.length, 'wargearList:', this.wargearList?.length);
+      } catch (error) {
+        console.error('Error loading talents:', error);
+        // Set empty arrays to prevent infinite loading
+        this.talentList = [];
+        this.wargearList = [];
+      } finally {
+        this.loading = false;
+        console.log('Loading state set to false');
       }
-      {
-        const { data } = await this.$axios.get('/api/wargear/', config);
-        this.wargearList = data;
-      }
-      this.loading = false;
     },
     dynamicSort(property) {
       let sortOrder = 1;
@@ -744,11 +768,23 @@ export default {
             break;
 
           case 'attribute':
-            text = `${this.getAttributeByKey(p.key).name} Rating ${p.value}+`;
+            const attribute = this.getAttributeByKey(p.key);
+            if (!attribute) {
+              console.warn(`Attribute not found for key: ${p.key}`);
+              text = `${p.key} Rating ${p.value}+`;
+            } else {
+              text = `${attribute.name} Rating ${p.value}+`;
+            }
             break;
 
           case 'skill':
-            text = `${this.getSkillByKey(p.key).name} Rating ${p.value}+`;
+            const skill = this.getSkillByKey(p.key);
+            if (!skill) {
+              console.warn(`Skill not found for key: ${p.key}`);
+              text = `${p.key} Rating ${p.value}+`;
+            } else {
+              text = `${skill.name} Rating ${p.value}+`;
+            }
             break;
 
           case 'character':

@@ -144,12 +144,9 @@ export default {
     return {
       darkTheme: false,
       navigation: [
-        { to: '/vault', title: 'Vault', subtitle: 'Browse Homebrews', icon: '' },
         { to: '/forge/my-characters', title: 'Forge', subtitle: 'Create Characters', icon: '' },
         { to: '/bestiary', title: 'Bestiary', subtitle: 'Find Threats', icon: '' },
         { to: '/network', title: 'Network', subtitle: 'Find Assets', icon: '' },
-        { to: '/posts', title: 'Articles', subtitle: 'Hobby Articles', icon: '' },
-        { to: '/ether', title: 'Ether', subtitle: 'Browse Let´s Plays', icon: '' },
         { to: '/library', title: 'Library', subtitle: 'Browse Rules', icon: '',
           children: [
             { to: '/library/species', title: 'Species', subtitle: 'Browse ', icon: '', },

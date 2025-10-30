@@ -75,19 +75,6 @@ export default {
     return {
       sections: [
         {
-          key: 'vault',
-          title: 'Homebrew <strong>Vault</strong>',
-          subtitle: 'A collection of Wrath & Glory homebrews',
-          imageSrc: '/img/artwork_vault_tile.jpg',
-          imageCredit: 'unknown, found at warhammer40k.fandom.com',
-          htmlText:
-            'The <strong>Vault</strong> contains an expanding collection of '
-            + '<strong>homebrews from fans</strong> of the Wrath & Glory Roleplaying Game.',
-          link: { text: 'To the Vault', route: '/vault' },
-          isActive: true,
-          classes: [],
-        },
-        {
           key: 'forge',
           title: 'Character <strong>Forge</strong>',
           subtitle: 'A Character Builder for Wrath & Glory',
@@ -110,8 +97,7 @@ export default {
           imageCredit: 'Artwork from Pixabay',
           htmlText:
             'In search of new <strong>threats</strong> for your players? '
-            + 'Check out the <strong>Wrath & Glory bestiary</strong>.'
-            + 'Those also contain enemies from the fan homebrews you can find in the <strong>Vault</strong>.',
+            + 'Check out the <strong>Wrath & Glory bestiary</strong>.',
           link: { text: 'To the Bestiary', route: '/bestiary' },
           isActive: true,
           classes: [],
@@ -124,28 +110,6 @@ export default {
           imageCredit: 'Artwork from Pixabay',
           htmlText: 'Check out some (one) of the assets provided by the community. E.g. some <strong>fillable character sheets</strong>.',
           link: { text: 'To the Network', route: '/network' },
-          isActive: true,
-          classes: [],
-        },
-        {
-          key: 'posts',
-          title: 'Roleplaying <strong>Articles</strong>',
-          subtitle: 'Writings about the Hobby',
-          imageSrc: '/img/artwork_posts_tile.jpg',
-          imageCredit: 'Artwork from Pixabay',
-          htmlText: '',
-          link: { text: 'To the Posts', route: '/posts' },
-          isActive: true,
-          classes: [],
-        },
-        {
-          key: 'eather',
-          title: 'Broadcasting <strong>Ether</strong>',
-          subtitle: 'A browsable list of Lets Plays',
-          imageSrc: '/img/artwork_ether.jpg',
-          imageCredit: 'Artwork from Pixabay',
-          htmlText: 'Find <strong>One-Shots</strong>, <strong>Lern to plays</strong> and <strong>Let´s Plays</strong>.<br><br><strong>Beta</strong>, naming might change.',
-          link: { text: 'To the Ether', route: '/ether' },
           isActive: true,
           classes: [],
         },
