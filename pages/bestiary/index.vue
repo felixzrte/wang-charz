@@ -199,11 +199,8 @@
             </h1>
             <p>
               Using the same threats within your Wrath and Glory campaign over and over?
-              Never leave your players bored again! search throu this growing collection of adversaries
-              derived from the various content provided by the fans. Check out the respective brews
-              within the <nuxt-link to="/vault">
-                Vault
-              </nuxt-link>.
+              Never leave your players bored again! Search through this growing collection of adversaries
+              derived from various community content.
             </p>
             <p>
               If you have any feedback, or want to add your brews to the collection, you can mail me at

@@ -510,7 +510,7 @@ export default {
           name: '\'An Abundance of Apocrypha\' content',
           hint: 'Add Human Homeworlds, Squad, Pariah, more is on the way.',
           enabled: true,
-          nuxt: '/vault/an-abundance-of-apocrypha',
+          nuxt: '',
           source: '',
         },
         {
@@ -519,7 +519,7 @@ export default {
           name: '\'Agents of the Golden Throne\' content',
           hint: 'Add a Tier 4 Ascension',
           enabled: false,
-          nuxt: '/vault/agents-of-the-golden-throne',
+          nuxt: '',
           source: 'https://docs.google.com/document/d/1VkOd-WGTXb_Lygm3BQYHX9eC2WzOczsD1kkG3fy4SIg/edit',
         },
         {
@@ -528,7 +528,7 @@ export default {
           name: '\'Pax Imperialis\' content',
           hint: 'Add Beastman, Navigators and Untouchables and their respective archetypes.',
           enabled: false,
-          nuxt: '/vault/pax-imperialis',
+          nuxt: '',
           source: 'https://docs.google.com/document/d/1VkOd-WGTXb_Lygm3BQYHX9eC2WzOczsD1kkG3fy4SIg/edit',
         },
         {
@@ -537,7 +537,7 @@ export default {
           name: '\'Tome of Glory\' content',
           hint: 'Add Chaos Archetypes.',
           enabled: true,
-          nuxt: '/vault/tome-of-glory',
+          nuxt: '',
           source: '',
         },
         {
@@ -546,7 +546,7 @@ export default {
           name: '\'The Emperor´s Angels\' content',
           hint: 'Add Space Marine archetypes and Librarius Powers.',
           enabled: false,
-          nuxt: '/vault/the-emperors-angels',
+          nuxt: '',
           source: '',
         },
         {
@@ -555,7 +555,7 @@ export default {
           name: '\'Legacy of the Necrontyr\' content',
           hint: 'Add Necron species and archetypes.',
           enabled: false,
-          nuxt: '/vault/legacy-of-the-necrontyr',
+          nuxt: '',
           source: '',
         },
         {
@@ -564,7 +564,7 @@ export default {
           name: '\'Let the Galaxy Burn\' content',
           hint: 'Add Heretic Astartes Chapters.',
           enabled: false,
-          nuxt: '/vault/let-the-galaxy-burn',
+          nuxt: '',
           source: '',
         },
         {

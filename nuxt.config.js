@@ -112,8 +112,6 @@ module.exports = {
     ['@nuxtjs/redirect-module', [
       /* @see https://github.com/nuxt-community/redirect-module */
       { from: '^/builder.*', to: '/forge/my-characters', statusCode: 301 },
-      { from: '^/vault/the-emperors-angles', to: '/vault/the-emperors-angels', statusCode: 301 },
-      { from: '^/blog/our-migration-from-deathwatch-to-wrath-and-glory', to: '/posts/1-our-migration-from-deathwatch-to-wrath-and-glory', statusCode: 301 },
     ]],
     ['@nuxtjs/pwa', {
       manifest: false,
@@ -134,17 +132,6 @@ module.exports = {
     routes: async () => {
       const base = process.env.NODE_ENV === 'production' ? 'https://www.doctors-of-doom.com' : 'http://localhost:3000';
 
-      const homebrewResponse = await axios.get(`${base}/api/homebrews/`);
-      const homebrewRoutes = homebrewResponse.data
-      .map((item) => {
-        return {
-          url: `/vault/${item.fields.urlSlug}`,
-          changefreq: 'weekly',
-          priority: 1,
-          lastmod: item.sys.updatedAt,
-        };
-      });
-
       const threatResponse = await axios.get(`${base}/api/threats/`);
       const threatRoutes = threatResponse.data
       .filter((item) => item.source.key !== 'core')
@@ -153,21 +140,8 @@ module.exports = {
         return `/bestiary/${slug}`;
       });
 
-      const postResponse = await axios.get(`${base}/api/posts/`);
-      const postRoutes = postResponse.data
-      .map( (item) => {
-        return {
-          url: `/posts/${item.fields.slug}`,
-          changefreq: 'weekly',
-          priority: 1,
-          lastmod: item.sys.updatedAt,
-        };
-      });
-
       return [
-        ...homebrewRoutes,
         ...threatRoutes,
-        ...postRoutes,
       ];
     },
     defaults: {
