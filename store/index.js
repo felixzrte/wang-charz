@@ -3,7 +3,7 @@ import axios from 'axios';
 export const state = () => ({
   version: 1,
   builderVersion: 11,
-  theme: 'light',
+  theme: 'dark',
 });
 
 export const getters = {

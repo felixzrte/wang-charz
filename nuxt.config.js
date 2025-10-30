@@ -81,6 +81,7 @@ module.exports = {
   */
   css: [
     '@/assets/scss/config/_fonts.scss',
+    '@/assets/css/catppuccin-mocha.css',
   ],
   /*
   ** Plugins to load before mounting the App
@@ -182,15 +183,38 @@ module.exports = {
   */
   vuetify: {
     theme: {
-      dark: false,
-      light: {
-        primary: colors.blue.darken2,
-        accent: colors.grey.darken3,
-        secondary: colors.amber.darken3,
-        info: colors.teal.lighten1,
-        warning: colors.amber.base,
-        error: colors.deepOrange.accent4,
-        success: colors.green.base,
+      dark: true,
+      themes: {
+        dark: {
+          // Catppuccin Mocha color palette (dark theme)
+          primary: '#89b4fa',      // Blue - used for primary actions
+          secondary: '#cba6f7',    // Mauve - used for secondary actions
+          accent: '#f5c2e7',       // Pink - used for highlights
+          error: '#f38ba8',        // Red - used for errors
+          warning: '#fab387',      // Peach - used for warnings
+          info: '#94e2d5',         // Teal - used for info
+          success: '#a6e3a1',      // Green - used for success (better contrast)
+          background: '#1e1e2e',   // Base - main background
+          surface: '#313244',      // Surface0 - cards, dialogs
+          'surface-variant': '#45475a', // Surface1 - slightly elevated
+          'on-surface': '#cdd6f4', // Text - main text color
+          'on-background': '#cdd6f4', // Text - text on background
+        },
+        light: {
+          // Catppuccin Latte color palette (light theme)
+          primary: '#1e66f5',      // Blue - used for primary actions
+          secondary: '#8839ef',    // Mauve - used for secondary actions
+          accent: '#ea76cb',       // Pink - used for highlights
+          error: '#d20f39',        // Red - used for errors
+          warning: '#fe640b',      // Peach - used for warnings
+          info: '#179299',         // Teal - used for info
+          success: '#40a02b',      // Green - used for success
+          background: '#eff1f5',   // Base - main background
+          surface: '#e6e9ef',      // Surface0 - cards, dialogs
+          'surface-variant': '#ccd0da', // Surface1 - slightly elevated
+          'on-surface': '#4c4f69', // Text - main text color
+          'on-background': '#4c4f69', // Text - text on background
+        },
       },
     },
   },

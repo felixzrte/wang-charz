@@ -67,7 +67,7 @@
       app
       dark
       dense
-      style="background-color: #212121;"
+      color="#1e1e2e"
       :fixed="toolbar.fixed"
       :clipped-left="toolbar.clippedLeft"
     >
